@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Button, Typography } from "@material-tailwind/react";
+import { IconButton, Typography } from "@material-tailwind/react";
 
 
 function Hero() {
@@ -11,43 +11,27 @@ function Hero() {
         <div className="container mx-auto mt-32 grid h-full w-full grid-cols-1 place-items-center lg:mt-14 lg:grid-cols-2">
           <div className="col-span-1">
             <Typography variant="h1" color="white" className="mb-4">
-              Your Perfect <br /> OTP App
+              Fortifying the Core of Digital Finance. <br /> 
             </Typography>
             <Typography
               variant="lead"
               className="mb-7 !text-white md:pr-16 xl:pr-28"            >
-              Our app can get OTP Code, 3D ByPasser, Paypal ByPass, E-MAIL OTP, Caller Spoof and more functions...
+              Society . E X E engineers military-grade encryption and advanced banking security systems. We protect the future of finance with impenetrable cryptographic architecture and zero-trust environments.
             </Typography>
             <Typography className="mb-4" color="white" variant="h6">
-              Get the app
+              View our latest projects and explore our innovative solutions in the world of FinTech and Cyber Security.
             </Typography>
             <div className="flex flex-col gap-2 md:mb-2 md:w-10/12 md:flex-row">
-              <Button
-                size="lg"
-                color="white"
-                className="flex justify-center items-center gap-3"              >
-                <Image
-                  width={256}
-                  height={256}
-                  src="/logos/logo-apple.png"
-                  alt="metamask"
-                  className="w-6 h-6"
-                />
-                App Store
-              </Button>
-              <Button
-                size="lg"
-                color="white"
-                className="flex justify-center items-center gap-3"              >
-                <Image
-                  width={256}
-                  height={256}
-                  src="/logos/logo-google.png"
-                  alt="metamask"
-                  className="w-6 h-6"
-                />
-                Google Play
-              </Button>
+              <a href="https://www.instagram.com/programameste" target="_blank" rel="noopener">
+                <IconButton variant="text" color="white">
+                  <i className="fa-brands fa-instagram text-2xl not-italic opacity-75"></i>
+                </IconButton>
+              </a>
+              <a href="https://t.me/society_exe" target="_blank" rel="noopener">
+                <IconButton variant="text" color="white">
+                  <i className="fa-brands fa-telegram text-2xl not-italic opacity-75"></i>
+                </IconButton>
+              </a>
             </div>
           </div>
           <Image
@@ -64,14 +48,12 @@ function Hero() {
       <div className="mx-8 lg:mx-16 -mt-24 rounded-xl bg-white p-5 md:p-14 shadow-md">
         <div>
           <Typography variant="h3" color="blue-gray" className="mb-3">
-            ¿Qué es un BOT OTP?
+            Uncompromising Security for the Financial Sector
           </Typography>
           <Typography
             variant="paragraph"
             className="font-normal !text-gray-500 lg:w-5/12"          >
-            Download our app to dive into a vast library of courses, tutorials,
-            and study materials on a wide range of subjects - from programming
-            and language learning to personal development and beyond
+            In a landscape where threats are constantly evolving, standard security is no longer enough. We specialize exclusively in building robust, encrypted ecosystems that safeguard every transaction, protect sensitive institutional data, and ensure absolute control over your digital assets.
           </Typography>
         </div>
       </div>
