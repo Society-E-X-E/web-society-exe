@@ -1,7 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Roboto } from "next/font/google";
-import { FixedPlugin, Layout, MaterialThemeProvider } from "@/components";
+import { MaterialThemeProvider } from "@/components";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="en">
@@ -33,10 +34,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={roboto.className}>
-        <MaterialThemeProvider>
-          {children}
-          <FixedPlugin />
-        </MaterialThemeProvider>
+        <MaterialThemeProvider>{children}</MaterialThemeProvider>
       </body>
     </html>
   );

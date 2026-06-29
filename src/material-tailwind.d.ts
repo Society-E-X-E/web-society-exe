@@ -2,15 +2,59 @@
 import "@material-tailwind/react";
 
 declare module "@material-tailwind/react" {
+  export interface TypographyProps {
+    placeholder?: string;
+    onResize?: unknown;
+    onResizeCapture?: unknown;
+    onPointerEnterCapture?: unknown;
+    onPointerLeaveCapture?: unknown;
+  }
+
   export interface ButtonProps {
     placeholder?: string;
-    onPointerEnterCapture?: (e: React.PointerEvent<HTMLButtonElement>) => void;
-    onPointerLeaveCapture?: (e: React.PointerEvent<HTMLButtonElement>) => void;
+    onResize?: unknown;
+    onResizeCapture?: unknown;
+    onPointerEnterCapture?: unknown;
+    onPointerLeaveCapture?: unknown;
   }
-  // Puedes añadir otros componentes si te dan el mismo error (Card, Typography, etc.)
-}
-    export interface TypographyProps {
+
+  export interface CardProps {
     placeholder?: string;
-    onPointerEnterCapture?: (e: React.PointerEvent<HTMLElement>) => void;
-    onPointerLeaveCapture?: (e: React.PointerEvent<HTMLElement>) => void;
+    onResize?: unknown;
+    onResizeCapture?: unknown;
+    onPointerEnterCapture?: unknown;
+    onPointerLeaveCapture?: unknown;
   }
+
+  export interface CardBodyProps {
+    placeholder?: string;
+    onResize?: unknown;
+    onResizeCapture?: unknown;
+    onPointerEnterCapture?: unknown;
+    onPointerLeaveCapture?: unknown;
+  }
+
+  export interface AvatarProps {
+    placeholder?: string;
+    onResize?: unknown;
+    onResizeCapture?: unknown;
+    onPointerEnterCapture?: unknown;
+    onPointerLeaveCapture?: unknown;
+  }
+
+  export interface IconButtonProps {
+    placeholder?: string;
+    onResize?: unknown;
+    onResizeCapture?: unknown;
+    onPointerEnterCapture?: unknown;
+    onPointerLeaveCapture?: unknown;
+  }
+
+  export interface NavbarProps {
+    placeholder?: string;
+    onResize?: unknown;
+    onResizeCapture?: unknown;
+    onPointerEnterCapture?: unknown;
+    onPointerLeaveCapture?: unknown;
+  }
+}

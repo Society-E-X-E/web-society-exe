@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { Typography, IconButton, Button } from "@material-tailwind/react";
 
-const LINKS = ["About Us", "Careers", "Press", "Blog", "Pricing"];
+const LINKS = ["About Us", "Prices", "Apps", "Support"];
 const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
@@ -13,15 +13,15 @@ export function Footer() {
           <div className="text-center md:text-left">
             <Typography
               as="a"
-              href="https://waexe.dev/home"
+              href="https://society-exe.dev"
               target="_blank"
               variant="h5"
               color="white"
-              className="mb-4"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}            >
-              We are . E X E
+              className="mb-4"            >
+              Society . E X E
             </Typography>
-            <Typography color="white" className="mb-12 font-normal"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-              Desarrollo & Diseño Web/App
+            <Typography color="white" className="mb-12 font-normal">
+              FinTech & Cyber Security Company. We are a team of passionate developers and designers who are dedicated to creating innovative solutions for the digital world.
             </Typography>
             <ul className="flex flex-wrap items-center justify-center md:justify-start">
               {LINKS.map((link, idx) => (
@@ -30,7 +30,7 @@ export function Footer() {
                     as="a"
                     href="#"
                     color="white"
-                    className={`py-1 font-medium transition-colors ${idx === 0 ? "pr-3" : "px-3"}`}  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}                  >
+                    className={`py-1 font-medium transition-colors ${idx === 0 ? "pr-3" : "px-3"}`}                  >
                     {link}
                   </Typography>
                 </li>
@@ -38,66 +38,68 @@ export function Footer() {
             </ul>
           </div>
           <div className="mt-8 w-full md:mt-0 md:w-auto">
-            <Typography variant="h6" color="white" className="mb-3"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <Typography variant="h6" color="white" className="mb-3">
               Contact us
             </Typography>
             <div className="flex flex-col gap-2">
               <Button
                 color="white"
-                className="flex items-center justify-center"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}              >
+                className="flex items-center justify-center"              >
                 <Image
                   width={256}
                   height={256}
-                  src="/logos/logo-apple.png"
+                  src="/image/whatsapp.png"
                   className="-mt-0.5 mr-2 h-6 w-6"
                   alt="ios"
                 />
                 Whatsapp
               </Button>
+              <a href="https://t.me/societyexe" target="_blank">
               <Button
                 color="white"
-                className="flex items-center justify-center"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}              >
+                className="flex items-center justify-center"              >
                 <Image
                   width={256}
                   height={256}
-                  src="/logos/logo-google.png"
+                  src="/image/telegram.png"
                   className="-mt-0.5 mr-2 h-6 w-6"
                   alt="ios"
                 />
                 Telegram
               </Button>
+              </a>
             </div>
           </div>
         </div>
         <div className="mt-16 flex flex-wrap items-center justify-center gap-y-4 gap-x-8 border-t border-gray-700 py-7 md:justify-between">
           <Typography
             color="white"
-            className="text-center font-normal opacity-75"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}          >
-            &copy; {CURRENT_YEAR} We are{" "}
-            <a href="https://t.me/exe_hk" target="_blank" rel="noopener">
+            className="text-center font-normal opacity-75"          >
+            &copy; {CURRENT_YEAR} Society{" "}
+            <a href="https://society-exe.site" target="_blank" rel="noopener">
               . E X E
             </a>{" "}
             by{" "}
             <a href="https://t.me/devcrackpy" target="_blank" rel="noopener">
-              Dev Crack
+              Devcrackpy
             </a>
             .
           </Typography>
 
           <div className="flex gap-2">
-            <IconButton variant="text" color="white"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <IconButton variant="text" color="white">
               <i className="fa-brands fa-twitter text-2xl not-italic opacity-75"></i>
             </IconButton>
-            <IconButton variant="text" color="white"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <IconButton variant="text" color="white">
               <i className="fa-brands fa-linkedin text-2xl not-italic opacity-75"></i>
             </IconButton>
-            <IconButton variant="text" color="white"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <IconButton variant="text" color="white">
               <i className="fa-brands fa-facebook text-2xl not-italic opacity-75"></i>
             </IconButton>
-            <IconButton variant="text" color="white"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <IconButton variant="text" color="white">
               <i className="fa-brands fa-github text-2xl not-italic opacity-75"></i>
             </IconButton>
-            <IconButton variant="text" color="white"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <IconButton variant="text" color="white">
               <i className="fa-brands fa-dribbble text-2xl not-italic opacity-75"></i>
             </IconButton>
           </div>

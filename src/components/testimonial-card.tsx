@@ -15,18 +15,18 @@ export function TestimonialCard({
   title,
 }: TestimonialCardProps) {
   return (
-    <Card shadow={false} className="items-center text-center"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-      <CardBody  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-        <Avatar src={img} className="mb-3" alt={client} size="lg" placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
-        <Typography variant="h6" color="blue-gray"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+    <Card shadow={false} className="items-center text-center">
+      <CardBody>
+        <Avatar src={img} className="mb-3" alt={client} size="lg" />
+        <Typography variant="h6" color="blue-gray">
           {client}
         </Typography>
-        <Typography variant="small" className="mb-3 font-medium !text-gray-700"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+        <Typography variant="small" className="mb-3 font-medium !text-gray-700">
           {title}
         </Typography>
         <Typography
           variant="paragraph"
-          className="mb-5 font-normal !text-gray-500"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        >
+          className="mb-5 font-normal !text-gray-500"        >
           &quot;{feedback}&quot;
         </Typography>
       </CardBody>

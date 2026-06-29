@@ -20,7 +20,7 @@ function NavItem({ children, href }: NavItemProps) {
         href={href || "#"}
         target={href ? "_blank" : "_self"}
         variant="small"
-        className="font-medium"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}      >
+        className="font-medium"      >
         {children}
       </Typography>
     </li>
@@ -62,14 +62,14 @@ export function Navbar() {
       shadow={false}
       blurred={false}
       color={isScrolling ? "white" : "transparent"}
-      className="fixed top-0 z-50 border-0"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}    >
+      className="fixed top-0 z-50 border-0"    >
       <div className="container mx-auto flex items-center justify-between">
         <Typography
           as="a"
           href="https://web-society-exe.vercel.app/"
           target="_blank"
           variant="h6"
-          color={isScrolling ? "gray" : "white"}  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        >
+          color={isScrolling ? "gray" : "white"}        >
           Society . E X E
         </Typography>
         <ul className={`ml-10 hidden items-center gap-6 lg:flex ${isScrolling ? "text-gray-900" : "text-white"}`}>
@@ -84,7 +84,7 @@ export function Navbar() {
           <IconButton
             variant="text"
             color={isScrolling ? "gray" : "white"}
-            size="sm"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}          >
+            size="sm"          >
             <i className="fa-brands fa-github text-base" />
           </IconButton>
           </a>
@@ -92,7 +92,7 @@ export function Navbar() {
           <IconButton
             variant="text"
             color={isScrolling ? "gray" : "white"}
-            size="sm"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}          >
+            size="sm"          >
             <i className="fa-brands fa-telegram text-base" />
           </IconButton>
           </a>
@@ -100,12 +100,12 @@ export function Navbar() {
           <IconButton
             variant="text"
             color={isScrolling ? "gray" : "white"}
-            size="sm"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}          >
+            size="sm"          >
             <i className="fa-brands fa-instagram text-base" />
           </IconButton>
           </a>
           <a href="https://web-society-exe.vercel.app/status" target="_blank" rel="noopener">
-            <Button color={isScrolling ? "gray" : "white"} size="sm"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <Button color={isScrolling ? "gray" : "white"} size="sm">
               Status
             </Button>
           </a>
@@ -114,7 +114,7 @@ export function Navbar() {
           variant="text"
           color={isScrolling ? "gray" : "white"}
           onClick={handleOpen}
-          className="ml-auto inline-block lg:hidden"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        >
+          className="ml-auto inline-block lg:hidden"        >
           {open ? (
             <XMarkIcon strokeWidth={2} className="h-6 w-6" />
           ) : (
@@ -132,25 +132,25 @@ export function Navbar() {
           </ul>
           <div className="mt-4 flex items-center gap-2">
             <a href="https://www.github.com/ahidroidev" target="_blank" rel="noopener" aria-label="Repositorio GitHub">
-            <IconButton variant="text" color="gray" size="sm"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <IconButton variant="text" color="gray" size="sm">
               <i className="fa-brands fa-github text-base" />
             </IconButton>
             </a>
             <a href="https://t.me/devcrackpy" target="_blank" rel="noopener" aria-label="Telegram Profile">
-            <IconButton variant="text" color="gray" size="sm"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <IconButton variant="text" color="gray" size="sm">
               <i className="fa-brands fa-telegram text-base" />
             </IconButton>
             </a>
             <a href="https://www.instagram.com/programameste" target="_blank" rel="noopener" aria-label="Instagram Profile">
-            <IconButton variant="text" color="gray" size="sm"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <IconButton variant="text" color="gray" size="sm">
               <i className="fa-brands fa-instagram text-base" />
             </IconButton>
             </a>
-            <IconButton variant="text" color="gray" size="sm"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+            <IconButton variant="text" color="gray" size="sm">
               <i className="fa-brands fa-instagram text-base" />
             </IconButton>
             <a href="https://web-society-exe.vercel.app/status" target="_blank" rel="noopener">
-              <Button color="gray" size="sm" className="ml-auto"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+              <Button color="gray" size="sm" className="ml-auto">
                 Status
               </Button>
             </a>

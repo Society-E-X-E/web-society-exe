@@ -10,12 +10,12 @@ interface InfoCardProps {
 
 export function InfoCard({ title, children }: InfoCardProps) {
   return (
-    <Card color="transparent" shadow={false}  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-      <CardBody className="grid px-0"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
-        <Typography variant="h2" color="blue-gray" className="mb-2"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+    <Card color="transparent" shadow={false}>
+      <CardBody className="grid px-0">
+        <Typography variant="h2" color="blue-gray" className="mb-2">
           {title}
         </Typography>
-        <Typography className=" font-normal"  placeholder={undefined} onResize={undefined} onResizeCapture={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>{children}</Typography>
+        <Typography className=" font-normal">{children}</Typography>
       </CardBody>
     </Card>
   );

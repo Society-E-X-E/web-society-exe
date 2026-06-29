@@ -1,7 +1,7 @@
 "use client";
+import type { ReactNode } from "react";
 import { ThemeProvider } from "@material-tailwind/react";
 
-// Exportación nombrada (para que coincida con lo que buscas)
-export function MTProvider({ children }: { children: React.ReactNode }) {
+export function MTProvider({ children }: { children: ReactNode }) {
   return <ThemeProvider>{children}</ThemeProvider>;
 }
