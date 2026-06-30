@@ -37,39 +37,6 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          <div className="mt-8 w-full md:mt-0 md:w-auto">
-            <Typography variant="h6" color="white" className="mb-3">
-              Contact us
-            </Typography>
-            <div className="flex flex-col gap-2">
-              <Button
-                color="white"
-                className="flex items-center justify-center"              >
-                <Image
-                  width={256}
-                  height={256}
-                  src="/image/whatsapp.png"
-                  className="-mt-0.5 mr-2 h-6 w-6"
-                  alt="ios"
-                />
-                Whatsapp
-              </Button>
-              <a href="https://t.me/societyexe" target="_blank">
-              <Button
-                color="white"
-                className="flex items-center justify-center"              >
-                <Image
-                  width={256}
-                  height={256}
-                  src="/image/telegram.png"
-                  className="-mt-0.5 mr-2 h-6 w-6"
-                  alt="ios"
-                />
-                Telegram
-              </Button>
-              </a>
-            </div>
-          </div>
         </div>
         <div className="mt-16 flex flex-wrap items-center justify-center gap-y-4 gap-x-8 border-t border-gray-700 py-7 md:justify-between">
           <Typography
@@ -87,6 +54,11 @@ export function Footer() {
           </Typography>
 
           <div className="flex gap-2">
+            <div className="mt-8 w-full md:mt-0 md:w-auto">
+            <Typography variant="h6" color="white" className="mb-3">
+              Contact us
+            </Typography>
+          </div>
             <a href="https://www.facebook.com/societyexe" target="_blank" rel="noopener noreferrer">
             <IconButton variant="text" color="white">
               <i className="fa-brands fa-facebook text-2xl not-italic opacity-75"></i>

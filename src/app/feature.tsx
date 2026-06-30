@@ -4,38 +4,38 @@ import React from "react";
 import { Typography } from "@material-tailwind/react";
 
 import {
-  CursorArrowRaysIcon,
-  HeartIcon,
-  LightBulbIcon,
+  DeviceTabletIcon,
   LockClosedIcon,
+  UserGroupIcon,
+  WindowIcon,
 } from "@heroicons/react/24/solid";
 
 import FeatureCard from "../components/feature-card";
 
 const FEATURES = [
   {
-    icon: CursorArrowRaysIcon,
+    icon: UserGroupIcon,
     title: "Expert Instructors",
     children:
       "Learn from the best. Our instructors are industry experts, academics, and seasoned professionals dedicated to helping you.",
   },
   {
-    icon: HeartIcon,
-    title: "Interactive Learning",
+    icon: DeviceTabletIcon,
+    title: "Interactive Immutable Access Control",
     children:
-      "Engage with interactive quizzes, hands-on exercises, and discussion forums to reinforce your understanding and connect.",
+      "Enforcing stringent authentication standards, including mandatory cryptographic key verification, to secure every login dashboard, transaction, and system deployment across your entire financial network.",
   },
   {
     icon: LockClosedIcon,
-    title: "Achievement Unlocked",
+    title: "End-to-End Cryptographic Encryption",
     children:
-      "Earn certificates and badges as you complete courses, showcasing your newfound skills to the world.",
+      "Deploying advanced cryptographic protocols to secure financial data both at rest and in transit, ensuring critical information remains entirely unreadable to unauthorized entities.",
   },
   {
-    icon: LightBulbIcon,
-    title: "Personalized Progress Tracking",
+    icon: WindowIcon,
+    title: "Threat Neutralization Infrastructure",
     children:
-      "Stay on top of your learning journey with progress tracking and personalized recommendations to keep you motivated.",
+      "Custom-built security frameworks designed to integrate seamlessly with modern banking environments, actively monitoring and neutralizing vulnerabilities before they can be exploited.",
   },
 ];
 
