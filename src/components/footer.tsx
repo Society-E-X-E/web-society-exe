@@ -1,6 +1,5 @@
 "use client";
-import Image from "next/image";
-import { Typography, IconButton, Button } from "@material-tailwind/react";
+import { Typography, IconButton } from "@material-tailwind/react";
 
 const LINKS = ["About Us", "Prices", "Apps", "Support"];
 const CURRENT_YEAR = new Date().getFullYear();
