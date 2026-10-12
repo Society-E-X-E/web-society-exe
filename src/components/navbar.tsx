@@ -23,9 +23,9 @@ const SOCIAL_LINKS = [
     icon: "fa-telegram",
   },
   {
-    label: "Instagram",
-    href: "https://www.instagram.com/programameste",
-    icon: "fa-instagram",
+    label: "Whatsapp Business",
+    href: "https://wa.me/573223213752",
+    icon: "fa-whatsapp",
   },
 ];
 
@@ -64,10 +64,10 @@ export function Navbar() {
       <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:px-6">
         <a href="#home" className="flex items-center gap-3">
           <span className="grid h-9 w-9 place-items-center rounded-lg border border-[#64e8e0]/40 bg-[#64e8e0]/10 text-[11px] font-extrabold tracking-[-0.08em] text-[#79ebe4]">
-            .EXE
+            . E X E
           </span>
           <span className={`text-sm font-semibold tracking-wide ${foreground}`}>
-            Society
+            Society . E X E
           </span>
         </a>
         <nav aria-label="Navegación principal">

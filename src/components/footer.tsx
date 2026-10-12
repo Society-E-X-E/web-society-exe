@@ -10,9 +10,9 @@ const SOCIAL_LINKS = [
     icon: "fa-telegram",
   },
   {
-    label: "Instagram",
-    href: "https://www.instagram.com/programameste",
-    icon: "fa-instagram",
+    label: "Whatsapp Business",
+    href: "https://wa.me/573223213752",
+    icon: "fa-whatsapp",
   },
 ];
 
@@ -34,7 +34,7 @@ export function Footer() {
             </p>
           </div>
           <a
-            href="mailto:Info@society-exe.site?subject=Consulta%20profesional"
+            href="https://wa.me/573223213752"
             className="inline-flex min-h-13 shrink-0 items-center justify-center gap-3 rounded-full bg-[#64e8e0] px-7 py-3 text-sm font-bold text-[#061012] transition hover:bg-[#9af7f1]"
           >
             Contactar a Society . E X E
@@ -69,10 +69,10 @@ export function Footer() {
               Info@society-exe.site
             </a>
             <a
-              href="tel:+573223213752"
+              href="https://wa.me/573223213752"
               className="transition hover:text-[#79ebe4]"
             >
-              +57 322 321 3752
+              Whatsapp Business
             </a>
           </address>
           <nav aria-label="Redes sociales">
