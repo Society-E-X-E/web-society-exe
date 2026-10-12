@@ -1,38 +1,37 @@
 "use client";
 
-import React from "react";
 import { Typography, Card } from "@material-tailwind/react";
 
 const FAQS = [
   {
-    title: "How do I get started?",
-    desc: "Getting started is easy! Simply [Provide a brief overview of the initial steps or link to a detailed guide].",
+    title: "What is this site for?",
+    desc: "It shares general information about defensive cybersecurity, security awareness, and responsible preparation.",
   },
   {
-    title: "Is there a free trial available?",
-    desc: "Yes, we offer a 30 days free trial so you can experience our mobile application with no commitment.",
+    title: "Is written permission required for testing?",
+    desc: "Yes. Testing must have explicit authorization from the system owner and stay within a clearly agreed scope.",
   },
   {
-    title: "How can I upgrade my account?",
-    desc: "To upgrade your account, log in and navigate to the [Upgrade Account] section in your dashboard. Follow the prompts to select your preferred plan.",
+    title: "What kind of security work is appropriate?",
+    desc: "Defensive practices and assessments with explicit permission and a clearly agreed scope are appropriate. Never target accounts or systems without authorization.",
   },
   {
-    title: "Can I cancel my subscription anytime?",
-    desc: "Absolutely, you can cancel your subscription at any time with no questions asked. Your subscription will remain active until the end of the current billing cycle.",
+    title: "Should I share passwords or verification codes?",
+    desc: "No. Never share passwords, one-time codes, recovery codes, or private keys. Contact your service provider through its official channels if you need account help.",
   },
   {
-    title: "How can I upgrade my account to paid?",
-    desc: "To upgrade your account, log in and navigate to the [Upgrade Account] section in your dashboard. Follow the prompts to select your preferred plan.",
+    title: "What should an authorized assessment include?",
+    desc: "Agree on ownership, written permission, scope, timing, testing limits, emergency contacts, and a secure way to report findings before work starts.",
   },
   {
-    title: "What if I need help or have technical issues?",
-    desc: "Our dedicated support team is here to assist you. Reach out via [mention preferred support channels, e.g., live chat, email, or phone], and we'll get back to you promptly.",
+    title: "Where can I get help with a security incident?",
+    desc: "Contact your organization’s security team or the affected service provider using a verified, official channel. If you are in immediate danger, contact local emergency services.",
   },
 ];
 
 export function Faqs() {
   return (
-    <section className="px-8 py-20">
+    <section id="faq" className="px-8 py-20">
       <div className="container max-w-6xl mx-auto">
         <div className="text-center">
           <Typography variant="h1" color="blue-gray" className="mb-4">
@@ -40,10 +39,10 @@ export function Faqs() {
           </Typography>
           <Typography
             variant="lead"
-            className="mx-auto mb-24 !text-gray-500 lg:w-3/5"          >
-            A lot of people don&apos;t appreciate the moment until it&apos;s
-            passed. I&apos;m not trying my hardest, and I&apos;m not trying to
-            do
+            className="mx-auto mb-24 !text-gray-500 lg:w-3/5"
+          >
+            Clear boundaries and safe practices help protect accounts,
+            organizations, and the people who depend on them.
           </Typography>
         </div>
 

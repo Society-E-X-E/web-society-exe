@@ -7,20 +7,20 @@ import { Typography } from "@material-tailwind/react";
 
 const OPTIONS = [
   {
-    title: "100",
-    description: "Learning Courses",
+    title: "Assess",
+    description: "Know your systems and risks",
   },
   {
-    title: "500+",
-    description: "Expert Instructors",
+    title: "Protect",
+    description: "Use layered safeguards",
   },
   {
-    title: "24/7",
-    description: "Support",
+    title: "Prepare",
+    description: "Plan for incidents",
   },
   {
-    title: "5/5",
-    description: "Review Stars",
+    title: "Improve",
+    description: "Learn and adapt over time",
   },
 ];
 
@@ -33,16 +33,16 @@ export function MobileConvenience() {
           height={256}
           src="/image/iphone.png"
           className="col-span-1 w-1/2 mx-auto lg:w-10/12"
-          alt="iphone-photo"
+          alt="Illustration of a mobile device"
         />
         <div className="col-span-1 mx-auto max-w-lg px-4 lg:px-0">
           <Typography variant="h2" color="blue-gray" className="mb-4">
-            Mobile Convenience
+            A practical security cycle
           </Typography>
           <Typography
             variant="lead"
             className="mb-5 px-4 text-left  text-xl !text-gray-500 lg:px-0  "          >
-            Access your learning materials on the go.
+            Build resilience through repeatable, responsible steps.
           </Typography>
 
           <div className="col-span-2 grid gap-5 grid-cols-2 ">

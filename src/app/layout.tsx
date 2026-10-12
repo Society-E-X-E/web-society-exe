@@ -11,9 +11,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Society . E X E | FinTech Solutions ",
+  title: "Society . E X E | Defensive Cybersecurity",
   description:
-    "We are your best option for FinTech solutions. We offer cutting-edge technology and innovative services to help you succeed in the digital economy.",
+    "Explore defensive cybersecurity practices, security education, authorized assessments, and incident readiness.",
 };
 
 export default function RootLayout({

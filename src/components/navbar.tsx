@@ -10,17 +10,17 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 interface NavItemProps {
   children: React.ReactNode;
-  href?: string;
+  href: string;
 }
 function NavItem({ children, href }: NavItemProps) {
   return (
     <li>
       <Typography
         as="a"
-        href={href || "#"}
-        target={href ? "_blank" : "_self"}
+        href={href}
         variant="small"
-        className="font-medium"      >
+        className="font-medium"
+      >
         {children}
       </Typography>
     </li>
@@ -36,10 +36,14 @@ export function Navbar() {
   }
 
   React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpen(false)
-    );
+    function handleResize() {
+      if (window.innerWidth >= 960) {
+        setOpen(false);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   React.useEffect(() => {
@@ -66,17 +70,18 @@ export function Navbar() {
       <div className="container mx-auto flex items-center justify-between">
         <Typography
           as="a"
-          href="https://society-exe.site"
-          target="_blank"
+          href="#home"
           variant="h6"
-          color={isScrolling ? "gray" : "white"}        >
+          color={isScrolling ? "gray" : "white"}
+        >
           Society . E X E
         </Typography>
         <ul className={`ml-10 hidden items-center gap-6 lg:flex ${isScrolling ? "text-gray-900" : "text-white"}`}>
-          <NavItem>Home</NavItem>
-          <NavItem>About Us</NavItem>
-          <NavItem>Contact Us</NavItem>
-          <NavItem href="https://t.me/devcrackpy">Dev</NavItem>
+          <NavItem href="#home">Home</NavItem>
+          <NavItem href="#services">Security</NavItem>
+          <NavItem href="#approach">Guidance</NavItem>
+          <NavItem href="#faq">FAQ</NavItem>
+          <NavItem href="#contact">Contact</NavItem>
         </ul>
         <div className="hidden gap-2 lg:flex lg:items-center">
           
@@ -111,10 +116,15 @@ export function Navbar() {
           </a>
         </div>
         <IconButton
+          type="button"
           variant="text"
           color={isScrolling ? "gray" : "white"}
           onClick={handleOpen}
-          className="ml-auto inline-block lg:hidden"        >
+          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
+          className="ml-auto inline-block lg:hidden"
+        >
           {open ? (
             <XMarkIcon strokeWidth={2} className="h-6 w-6" />
           ) : (
@@ -122,13 +132,15 @@ export function Navbar() {
           )}
         </IconButton>
       </div>
-      <Collapse open={open}>
+      <div id="mobile-navigation">
+        <Collapse open={open}>
         <div className="container mx-auto mt-4 rounded-lg border-t border-blue-gray-50 bg-white px-6 py-5">
           <ul className="flex flex-col gap-4 text-blue-gray-900">
-            <NavItem>Home</NavItem>
-            <NavItem>About Us</NavItem>
-            <NavItem>Contact Us</NavItem>
-            <NavItem href="https://society-exe.site/docs">Docs</NavItem>
+            <NavItem href="#home">Home</NavItem>
+            <NavItem href="#services">Security</NavItem>
+            <NavItem href="#approach">Guidance</NavItem>
+            <NavItem href="#faq">FAQ</NavItem>
+            <NavItem href="#contact">Contact</NavItem>
           </ul>
           <div className="mt-4 flex items-center gap-2">
             <a href="https://www.github.com/ahidroidev" target="_blank" rel="noopener" aria-label="Repositorio GitHub">
@@ -146,9 +158,6 @@ export function Navbar() {
               <i className="fa-brands fa-instagram text-base" />
             </IconButton>
             </a>
-            <IconButton variant="text" color="gray" size="sm">
-              <i className="fa-brands fa-instagram text-base" />
-            </IconButton>
             <a href="https://society-exe.site/status" target="_blank" rel="noopener">
               <Button color="gray" size="sm" className="ml-auto">
                 Status
@@ -156,7 +165,8 @@ export function Navbar() {
             </a>
           </div>
         </div>
-      </Collapse>
+        </Collapse>
+      </div>
     </MTNavbar>
   );
 }

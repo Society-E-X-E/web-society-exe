@@ -5,21 +5,21 @@ import React, { useState } from "react";
 const accordionItems = [
   {
     id: "customAccordion1",
-    title: "Material Tailwind React",
+    title: "Authorized security assessments",
     description:
-      "Material Tailwind is an open-source crafted in Tailwind CSS. Get Material Tailwind and take advantage of its free components and features that will help you set up your web project quickly.",
+      "Test only systems you own or have explicit written permission to assess. Agree on scope, methods, timing, and reporting before any testing begins.",
   },
   {
     id: "customAccordion2",
-    title: "Material Tailwind HTML",
+    title: "Secure-by-design practices",
     description:
-      "Material Tailwind is an open-source crafted in Tailwind CSS. Get Material Tailwind and take advantage of its free components and features that will help you set up your web project quickly.",
+      "Use unique passwords, multifactor authentication, least-privilege access, timely updates, and secure recovery procedures to reduce common risks.",
   },
   {
     id: "customAccordion3",
-    title: "Material Tailwind Vue",
+    title: "Incident readiness",
     description:
-      "Material Tailwind is an open-source crafted in Tailwind CSS. Get Material Tailwind and take advantage of its free components and features that will help you set up your web project quickly.",
+      "Prepare a documented response plan, protect backups, identify trusted contacts, and know how to report incidents through your organization or service provider.",
   },
 ];
 
@@ -32,13 +32,12 @@ export function VideoIntro() {
 
   return (
     <div className="p-8">
-      <div className="container relative mx-auto mt-20 w-full max-w-6xl overflow-hidden rounded-xl px-5">
-        <div
-          className="group block w-full"
-          aria-disabled="false"
-          data-accordion-container
-          data-accordion-mode="exclusive"
-        >
+      <section
+        id="approach"
+        aria-label="Defensive security guidance"
+        className="container relative mx-auto mt-20 w-full max-w-6xl overflow-hidden rounded-xl px-5"
+      >
+        <div className="block w-full">
           {accordionItems.map(({ id, title, description }) => {
             const isOpen = activeId === id;
 
@@ -50,14 +49,12 @@ export function VideoIntro() {
                 <button
                   type="button"
                   className="flex w-full cursor-pointer items-center justify-between py-5 text-left font-medium text-slate-800 dark:text-white"
-                  data-accordion-toggle
-                  data-accordion-target={`#${id}`}
                   aria-expanded={isOpen}
+                  aria-controls={id}
                   onClick={() => toggleItem(id)}
                 >
                   {title}
                   <svg
-                    data-accordion-icon
                     width="1.5em"
                     height="1.5em"
                     strokeWidth="1.5"
@@ -77,7 +74,8 @@ export function VideoIntro() {
                 </button>
                 <div
                   id={id}
-                  className={`overflow-hidden transition-all duration-300 ${isOpen ? "block" : "hidden"}`}
+                  hidden={!isOpen}
+                  className="overflow-hidden transition-all duration-300"
                 >
                   <p className="mb-5 text-sm text-slate-600 dark:text-slate-400">
                     {description}
@@ -87,7 +85,7 @@ export function VideoIntro() {
             );
           })}
         </div>
-      </div>
+      </section>
     </div>
   );
 }

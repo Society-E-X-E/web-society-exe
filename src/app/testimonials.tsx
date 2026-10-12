@@ -1,61 +1,58 @@
 "use client";
 
 import React from "react";
-import { Typography } from "@material-tailwind/react";
-import { UserIcon } from "@heroicons/react/24/solid";
-import TestimonialCard from "../components/testimonial-card";
+import { Card, CardBody, Typography } from "@material-tailwind/react";
 
-
-const TESTIMONIALS = [
+const PRINCIPLES = [
   {
-    feedback:
-      "It has been a game-changer for my business. Their dedication, expertise, and attention to detail have truly set them apart. I highly recommend their services!",
-    client: "Jessica Devis",
-    title: "CEO @ MARKETING DIGITAL LTD.",
-    img: "/image/avatar1.jpg",
+    title: "Authorization first",
+    description:
+      "Security testing belongs only on systems you own or are explicitly authorized to assess.",
   },
   {
-    feedback:
-      "It understood my unique needs and delivered a tailored solution promptly. Their customer support is top-notch, and I appreciate their commitment.",
-    client: "Mary Joshiash",
-    title: "MARKETING @ APPLE INC.",
-    img: "/image/avatar2.jpg",
+    title: "Privacy by design",
+    description:
+      "Limit access to sensitive information and collect only what is necessary to protect people and systems.",
   },
   {
-    feedback:
-      "They not only met but exceeded our expectations. Their innovative approach and technical proficiency have been instrumental in our success.",
-    client: "Marcell Glock",
-    title: "CFO @ APPLE INC..",
-    img: "/image/avatar3.jpg",
+    title: "Clear, actionable guidance",
+    description:
+      "Communicate risks responsibly and focus recommendations on practical, verifiable improvements.",
   },
 ];
 
-export function Testimonials() {
+export function Principles() {
   return (
-    <section className="px-10 !py-20">
+    <section id="principles" className="px-10 !py-20">
       <div className="container mx-auto">
         <div className="mb-20 flex w-full flex-col items-center">
-          <div className="mb-10 flex h-12 w-12 items-center justify-center rounded-lg bg-gray-900 text-white ">
-            <UserIcon className="h-6 w-6" />
-          </div>
           <Typography variant="h2" color="blue-gray" className="mb-2">
-            What Clients Say
+            Our principles
           </Typography>
           <Typography
             variant="lead"
-            className="mb-10 max-w-3xl text-center !text-gray-600"          >
-            Discover what our valued clients have to say about their experiences
-            with our services. We take pride in delivering exceptional results
-            and fostering lasting partnerships.
+            className="mb-10 max-w-3xl text-center !text-gray-600"
+          >
+            Responsible security work protects people, respects boundaries, and
+            helps system owners make informed improvements.
           </Typography>
         </div>
         <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-3 lg:px-20">
-          {TESTIMONIALS.map((props, key) => (
-            <TestimonialCard key={key} {...props} />
+          {PRINCIPLES.map(({ title, description }) => (
+            <Card key={title} shadow={false} className="border border-gray-200">
+              <CardBody>
+                <Typography variant="h5" color="blue-gray" className="mb-3">
+                  {title}
+                </Typography>
+                <Typography className="font-normal !text-gray-600">
+                  {description}
+                </Typography>
+              </CardBody>
+            </Card>
           ))}
         </div>
       </div>
     </section>
   );
 }
-export default Testimonials;
+export default Principles;
