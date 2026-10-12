@@ -72,8 +72,10 @@ export function Footer() {
               href="https://wa.me/573223213752"
               className="transition hover:text-[#79ebe4]"
             >
+              <i className="fa-brands fa-whatsapp text-lg" />
               Whatsapp Business
             </a>
+
           </address>
           <nav aria-label="Redes sociales">
             <ul className="flex items-center gap-5">
