@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const NAV_ITEMS = [
-  { label: "Home", href: "#home" },
-  { label: "Security", href: "#services" },
-  { label: "Guidance", href: "#approach" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Inicio", href: "#home" },
+  { label: "Método OTP", href: "#otp" },
+  { label: "Experiencia", href: "#experience" },
+  { label: "Enfoque", href: "#approach" },
+  { label: "Contacto", href: "#contact" },
 ];
 
 const SOCIAL_LINKS = [
@@ -61,11 +61,16 @@ export function Navbar() {
         isScrolling ? "bg-white shadow-sm" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <a href="#home" className={`text-lg font-semibold ${foreground}`}>
-          Society . E X E
+      <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:px-6">
+        <a href="#home" className="flex items-center gap-3">
+          <span className="grid h-9 w-9 place-items-center rounded-lg border border-[#64e8e0]/40 bg-[#64e8e0]/10 text-[11px] font-extrabold tracking-[-0.08em] text-[#79ebe4]">
+            .EXE
+          </span>
+          <span className={`text-sm font-semibold tracking-wide ${foreground}`}>
+            Society
+          </span>
         </a>
-        <nav aria-label="Main navigation">
+        <nav aria-label="Navegación principal">
           <ul
             className={`ml-10 hidden items-center gap-6 lg:flex ${foreground}`}
           >
@@ -115,49 +120,48 @@ export function Navbar() {
           )}
         </button>
       </div>
-      {open && (
-        <nav
-          id="mobile-navigation"
-          aria-label="Mobile navigation"
-          className="container mx-auto rounded-lg border-t border-slate-200 bg-white px-6 py-5 text-slate-900 shadow-lg lg:hidden"
-        >
-          <ul className="flex flex-col gap-4">
-            {NAV_ITEMS.map(({ label, href }) => (
-              <li key={href}>
-                <a
-                  href={href}
-                  onClick={() => setOpen(false)}
-                  className="font-medium"
-                >
-                  {label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-4 flex items-center gap-4">
-            {SOCIAL_LINKS.map(({ label, href, icon }) => (
+      <nav
+        id="mobile-navigation"
+        aria-label="Navegación móvil"
+        hidden={!open}
+        className="container mx-auto rounded-lg border-t border-slate-200 bg-white px-6 py-5 text-slate-900 shadow-lg lg:hidden"
+      >
+        <ul className="flex flex-col gap-4">
+          {NAV_ITEMS.map(({ label, href }) => (
+            <li key={href}>
               <a
-                key={label}
                 href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="text-gray-700"
+                onClick={() => setOpen(false)}
+                className="font-medium"
               >
-                <i className={`fa-brands ${icon} text-base`} />
+                {label}
               </a>
-            ))}
+            </li>
+          ))}
+        </ul>
+        <div className="mt-4 flex items-center gap-4">
+          {SOCIAL_LINKS.map(({ label, href, icon }) => (
             <a
-              href="https://society-exe.site/status"
+              key={label}
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-auto rounded bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+              aria-label={label}
+              className="text-gray-700"
             >
-              Status
+              <i className={`fa-brands ${icon} text-base`} />
             </a>
-          </div>
-        </nav>
-      )}
+          ))}
+          <a
+            href="https://society-exe.site/status"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-auto rounded bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+          >
+            Estado
+          </a>
+        </div>
+      </nav>
     </header>
   );
 }

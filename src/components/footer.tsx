@@ -1,110 +1,100 @@
-const CURRENT_YEAR = new Date().getFullYear();
-
 const SOCIAL_LINKS = [
-  {
-    label: "Facebook",
-    href: "https://www.facebook.com/societyexe",
-    icon: "fa-facebook",
-  },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/programameste",
-    icon: "fa-instagram",
-  },
   {
     label: "GitHub",
     href: "https://github.com/ahidroidev",
     icon: "fa-github",
   },
   {
-    label: "WhatsApp",
-    href: "https://wa.me/573223213752",
-    icon: "fa-whatsapp",
-  },
-  {
     label: "Telegram",
     href: "https://t.me/society_exe",
     icon: "fa-telegram",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/programameste",
+    icon: "fa-instagram",
   },
 ];
 
 export function Footer() {
   return (
-    <footer id="contact" className="mt-10 bg-gray-900 px-8 pt-12 text-white">
-      <div className="container mx-auto">
-        <div className="flex flex-wrap justify-center gap-8 md:justify-between">
-          <div className="text-center md:text-left">
-            <a
-              href="https://society-exe.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-4 inline-block text-xl font-semibold"
-            >
-              Society . E X E
-            </a>
-            <p className="mb-12 font-normal">
-              Defensive cybersecurity guidance, security education, and
-              responsible practices for safer digital systems.
+    <>
+      <section className="bg-[#10191b] px-6 py-16 sm:px-10 lg:px-12">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 rounded-3xl border border-[#64e8e0]/15 bg-[radial-gradient(ellipse_at_90%_0%,rgba(100,232,224,0.1),transparent_40%),#0b1012] p-8 sm:p-12 lg:flex-row lg:items-center">
+          <div className="max-w-2xl">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#71e5df]">
+              Iniciemos una conversación
             </p>
-            <nav aria-label="Footer navigation">
-              <ul className="flex flex-wrap items-center justify-center md:justify-start">
-                {[
-                  { label: "Security", href: "#services" },
-                  { label: "Our principles", href: "#principles" },
-                  { label: "FAQ", href: "#faq" },
-                ].map(({ label, href }) => (
-                  <li key={label}>
-                    <a
-                      href={href}
-                      className="px-3 py-1 font-medium transition-colors hover:text-gray-300"
-                    >
-                      {label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl">
+              Ingeniería financiera con la seguridad en el centro.
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-[#9ca8aa]">
+              Hablemos sobre sistemas de pago, arquitectura de seguridad o la
+              evolución de la autenticación bancaria.
+            </p>
           </div>
+          <a
+            href="mailto:Info@society-exe.site?subject=Consulta%20profesional"
+            className="inline-flex min-h-13 shrink-0 items-center justify-center gap-3 rounded-full bg-[#64e8e0] px-7 py-3 text-sm font-bold text-[#061012] transition hover:bg-[#9af7f1]"
+          >
+            Contactar a Society . E X E
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 border-t border-gray-700 py-7 md:justify-between">
-          <p className="text-center font-normal opacity-75">
-            &copy; {CURRENT_YEAR} Society{" "}
-            <a
-              href="https://society-exe.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              . E X E
-            </a>{" "}
-            by{" "}
-            <a
-              href="https://t.me/devcrackpy"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Devcrackpy
+      </section>
+      <footer
+        id="contact"
+        className="border-t border-white/10 bg-[#050708] px-6 py-8 sm:px-10 lg:px-12"
+      >
+        <div className="mx-auto flex max-w-7xl flex-col gap-7 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <a href="#home" className="flex items-center gap-3">
+              <span className="grid h-9 w-9 place-items-center rounded-lg border border-[#64e8e0]/35 bg-[#64e8e0]/10 text-[11px] font-extrabold tracking-[-0.08em] text-[#79ebe4]">
+                .EXE
+              </span>
+              <span className="text-sm font-semibold text-white">
+                Society . E X E
+              </span>
             </a>
-            .
-          </p>
-
-          <div className="flex items-center gap-4">
-            <h2 className="text-lg font-semibold">Contact us</h2>
-            {SOCIAL_LINKS.map(({ label, href, icon }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="text-white opacity-75 hover:opacity-100"
-              >
-                <i className={`fa-brands ${icon} text-2xl not-italic`} />
-              </a>
-            ))}
+            <p className="mt-4 text-xs text-[#7e8b8e]">
+              © {new Date().getFullYear()} Society . E X E · Ingeniería y
+              seguridad financiera.
+            </p>
           </div>
+          <address className="flex flex-col gap-2 text-sm not-italic text-[#acb6b7] sm:items-end">
+            <a
+              href="mailto:Info@society-exe.site"
+              className="transition hover:text-[#79ebe4]"
+            >
+              Info@society-exe.site
+            </a>
+            <a
+              href="tel:+573223213752"
+              className="transition hover:text-[#79ebe4]"
+            >
+              +57 322 321 3752
+            </a>
+          </address>
+          <nav aria-label="Redes sociales">
+            <ul className="flex items-center gap-5">
+              {SOCIAL_LINKS.map(({ label, href, icon }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="text-[#9ca8aa] transition hover:text-[#79ebe4]"
+                  >
+                    <i className={`fa-brands ${icon} text-lg`} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }
 

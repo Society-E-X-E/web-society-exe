@@ -1,53 +1,73 @@
-"use client";
-
 const PRINCIPLES = [
   {
-    title: "Authorization first",
+    number: "01",
+    title: "Alcance y requisitos",
     description:
-      "Security testing belongs only on systems you own or are explicitly authorized to assess.",
+      "Entender el contexto de uso, los riesgos, las necesidades de integración y los criterios de éxito.",
   },
   {
-    title: "Privacy by design",
+    number: "02",
+    title: "Diseño y documentación",
     description:
-      "Limit access to sensitive information and collect only what is necessary to protect people and systems.",
+      "Definir la propuesta técnica, sus límites, supuestos y controles antes de cualquier evaluación.",
   },
   {
-    title: "Clear, actionable guidance",
+    number: "03",
+    title: "Revisión y evaluación",
     description:
-      "Communicate risks responsibly and focus recommendations on practical, verifiable improvements.",
+      "Planificar revisión especializada y pruebas autorizadas con criterios acordados y resultados trazables.",
+  },
+  {
+    number: "04",
+    title: "Certificación aplicable",
+    description:
+      "Identificar organismos y marcos de certificación adecuados. La aprobación dependerá de la evaluación formal correspondiente.",
   },
 ];
 
 export function Principles() {
   return (
-    <section id="principles" className="px-10 !py-20">
-      <div className="container mx-auto">
-        <div className="mb-20 flex w-full flex-col items-center">
-          <h2 className="mb-2 text-3xl font-bold text-slate-800">
-            Our principles
+    <section
+      id="approach"
+      aria-labelledby="approach-heading"
+      className="bg-[#050708] px-6 py-24 sm:px-10 lg:px-12 lg:py-32"
+    >
+      <div className="mx-auto max-w-7xl">
+        <div className="max-w-2xl">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#71e5df]">
+            Cómo trabajamos
+          </p>
+          <h2
+            id="approach-heading"
+            className="text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl"
+          >
+            Rigor técnico. Progreso verificable.
           </h2>
-          <p className="mb-10 max-w-3xl text-center text-lg text-gray-600">
-            Responsible security work protects people, respects boundaries, and
-            helps system owners make informed improvements.
+          <p className="mt-5 text-base leading-8 text-[#9ca8aa]">
+            Cada iniciativa debe avanzar con objetivos claros, documentación y
+            revisión apropiada para su impacto en el entorno financiero.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-3 lg:px-20">
-          {PRINCIPLES.map(({ title, description }) => (
-            <article
-              key={title}
-              className="rounded-xl border border-gray-200 p-6"
-            >
-              <h3 className="mb-3 text-xl font-semibold text-slate-800">
-                  {title}
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+          {PRINCIPLES.map(({ number, title, description }) => (
+            <article key={number} className="bg-[#0b1012] p-6 sm:p-7">
+              <span className="font-mono text-sm text-[#70e9e2]">{number}</span>
+              <h3 className="mt-8 text-base font-semibold text-[#f0f4f4]">
+                {title}
               </h3>
-              <p className="font-normal text-gray-600">
-                  {description}
+              <p className="mt-3 text-sm leading-7 text-[#97a3a5]">
+                {description}
               </p>
             </article>
           ))}
         </div>
+        <p className="mt-6 text-xs leading-6 text-[#718083]">
+          El proceso de certificación aún está sujeto a definir el método, el
+          alcance y los requisitos de los organismos correspondientes.
+        </p>
       </div>
     </section>
   );
 }
+
 export default Principles;

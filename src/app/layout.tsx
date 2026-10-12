@@ -1,18 +1,25 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Roboto } from "next/font/google";
+import { Manrope } from "next/font/google";
 
-const roboto = Roboto({
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700", "900"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Society . E X E | Defensive Cybersecurity",
+  title: "Society . E X E | Seguridad bancaria y tecnología de pagos",
   description:
-    "Explore defensive cybersecurity practices, security education, authorized assessments, and incident readiness.",
+    "Ingeniería de seguridad financiera, tecnología de pagos y desarrollo de un nuevo enfoque de autenticación OTP bancaria.",
+  openGraph: {
+    title: "Society . E X E | Seguridad bancaria y tecnología de pagos",
+    description:
+      "Ingeniería de seguridad financiera y tecnología de pagos con una visión centrada en la confianza.",
+    locale: "es_CO",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +28,7 @@ export default function RootLayout({
   children: ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <link
           rel="stylesheet"
@@ -32,7 +39,7 @@ export default function RootLayout({
         />
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
-      <body className={roboto.className}>{children}</body>
+      <body className={`${manrope.variable} antialiased`}>{children}</body>
     </html>
   );
 }

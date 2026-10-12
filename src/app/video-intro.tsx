@@ -1,92 +1,119 @@
-"use client";
-
-import React, { useState } from "react";
-
-const accordionItems = [
+const DESIGN_PILLARS = [
   {
-    id: "customAccordion1",
-    title: "Authorized security assessments",
+    number: "01",
+    title: "Diseño del método",
     description:
-      "Test only systems you own or have explicit written permission to assess. Agree on scope, methods, timing, and reporting before any testing begins.",
+      "Definir objetivos, modelo de amenazas y requisitos de integración para un nuevo método OTP bancario.",
   },
   {
-    id: "customAccordion2",
-    title: "Secure-by-design practices",
+    number: "02",
+    title: "Evaluación independiente",
     description:
-      "Use unique passwords, multifactor authentication, least-privilege access, timely updates, and secure recovery procedures to reduce common risks.",
+      "Someter la propuesta a revisión técnica y pruebas acordadas antes de considerar cualquier despliegue.",
   },
   {
-    id: "customAccordion3",
-    title: "Incident readiness",
+    number: "03",
+    title: "Camino a certificación",
     description:
-      "Prepare a documented response plan, protect backups, identify trusted contacts, and know how to report incidents through your organization or service provider.",
+      "Determinar los estándares, laboratorios y organismos aplicables según el alcance y las jurisdicciones objetivo.",
   },
 ];
 
 export function VideoIntro() {
-  const [activeId, setActiveId] = useState(accordionItems[0].id);
-
-  const toggleItem = (id: string) => {
-    setActiveId((current) => (current === id ? "" : id));
-  };
-
   return (
-    <div className="p-8">
-      <section
-        id="approach"
-        aria-label="Defensive security guidance"
-        className="container relative mx-auto mt-20 w-full max-w-6xl overflow-hidden rounded-xl px-5"
-      >
-        <div className="block w-full">
-          {accordionItems.map(({ id, title, description }) => {
-            const isOpen = activeId === id;
+    <section
+      id="otp"
+      aria-labelledby="otp-heading"
+      className="relative overflow-hidden bg-[#0a0f11] px-6 py-24 sm:px-10 lg:px-12 lg:py-32"
+    >
+      <div
+        aria-hidden="true"
+        className="absolute -right-40 top-10 h-96 w-96 rounded-full bg-[#40d9d1]/[0.07] blur-3xl"
+      />
+      <div className="relative mx-auto max-w-7xl">
+        <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div>
+            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#71e5df]">
+              Servicio en desarrollo
+            </p>
+            <h2
+              id="otp-heading"
+              className="text-4xl font-semibold leading-tight tracking-[-0.04em] text-white sm:text-5xl"
+            >
+              Un nuevo enfoque para la autenticación OTP bancaria.
+            </h2>
+            <p className="mt-6 text-base leading-8 text-[#a6b0b2]">
+              El proyecto central de Society . E X E es diseñar un nuevo método
+              de código de un solo uso pensado para el entorno financiero. La
+              propuesta se presentará cuando su alcance técnico esté definido.
+            </p>
+            <a
+              href="mailto:info@society-exe.site?subject=Consulta%20sobre%20autenticaci%C3%B3n%20OTP"
+              className="mt-8 inline-flex items-center gap-3 text-sm font-semibold text-[#79eae4] transition hover:text-white"
+            >
+              Consultar sobre el proyecto <span aria-hidden="true">↗</span>
+            </a>
+          </div>
 
-            return (
-              <div
-                key={id}
-                className="mb-2 rounded-lg border border-slate-200 px-2 dark:border-slate-700"
-              >
-                <button
-                  type="button"
-                  className="flex w-full cursor-pointer items-center justify-between py-5 text-left font-medium text-slate-800 dark:text-white"
-                  aria-expanded={isOpen}
-                  aria-controls={id}
-                  onClick={() => toggleItem(id)}
-                >
-                  {title}
-                  <svg
-                    width="1.5em"
-                    height="1.5em"
-                    strokeWidth="1.5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    color="currentColor"
-                    className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
-                  >
-                    <path
-                      d="M6 9L12 15L18 9"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div
-                  id={id}
-                  hidden={!isOpen}
-                  className="overflow-hidden transition-all duration-300"
-                >
-                  <p className="mb-5 text-sm text-slate-600 dark:text-slate-400">
-                    {description}
-                  </p>
-                </div>
+          <div className="rounded-3xl border border-white/10 bg-[#0e1517] p-6 sm:p-9">
+            <div className="mb-8 flex items-center justify-between border-b border-white/10 pb-5">
+              <div>
+                <p className="text-sm font-semibold text-white">
+                  De la investigación a la confianza
+                </p>
+                <p className="mt-1 text-xs text-[#829093]">
+                  Un recorrido transparente y por etapas
+                </p>
               </div>
-            );
-          })}
+              <span className="grid h-10 w-10 place-items-center rounded-full border border-[#64e8e0]/25 text-[#64e8e0]">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-5 w-5"
+                >
+                  <path
+                    d="M12 3 19 6v5c0 4.5-2.9 8.2-7 10-4.1-1.8-7-5.5-7-10V6l7-3Z"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M12 8v4l2.5 1.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div className="space-y-7">
+              {DESIGN_PILLARS.map(({ number, title, description }) => (
+                <article key={number} className="grid grid-cols-[3rem_1fr] gap-4">
+                  <span className="pt-0.5 font-mono text-sm text-[#64e8e0]">
+                    {number}
+                  </span>
+                  <div>
+                    <h3 className="text-base font-semibold text-[#f0f4f4]">
+                      {title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-7 text-[#97a3a5]">
+                      {description}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <p className="mt-8 border-t border-white/10 pt-5 text-xs leading-6 text-[#758184]">
+              La certificación dependerá de una evaluación formal por los
+              organismos competentes. No se afirma que el método esté certificado
+              ni aprobado actualmente.
+            </p>
+          </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 
