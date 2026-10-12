@@ -10,9 +10,9 @@ const SOCIAL_LINKS = [
     icon: "fa-telegram",
   },
   {
-    label: "Whatsapp Business",
-    href: "https://wa.me/573223213752",
-    icon: "fa-whatsapp",
+    label: "Facebook",
+    href: "https://www.facebook.com/societyexe",
+    icon: "fa-facebook",
   },
 ];
 
@@ -50,7 +50,7 @@ export function Footer() {
           <div>
             <a href="#home" className="flex items-center gap-3">
               <span className="grid h-9 w-9 place-items-center rounded-lg border border-[#64e8e0]/35 bg-[#64e8e0]/10 text-[11px] font-extrabold tracking-[-0.08em] text-[#79ebe4]">
-                .EXE
+                . E X E
               </span>
               <span className="text-sm font-semibold text-white">
                 Society . E X E

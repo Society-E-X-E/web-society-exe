@@ -23,9 +23,9 @@ const SOCIAL_LINKS = [
     icon: "fa-telegram",
   },
   {
-    label: "Whatsapp Business",
-    href: "https://wa.me/573223213752",
-    icon: "fa-whatsapp",
+    label: "Facebook",
+    href: "https://www.facebook.com/societyexe",
+    icon: "fa-facebook",
   },
 ];
 
