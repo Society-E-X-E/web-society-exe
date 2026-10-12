@@ -67,7 +67,7 @@ export function Footer() {
               className="transition hover:text-[#79ebe4]"
             >
               <i className="fa-brands fa-gmail text-lg" />
-              Info@society-exe.site
+               Info@society-exe.site
             </a>
             <a
               href="https://wa.me/573223213752"
