@@ -81,15 +81,15 @@ function Hero() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-white">
-                    Security lab
+                    Laboratorio de seguridad
                   </p>
                   <p className="mt-1 text-xs text-[#829093]">
-                    Banking authentication
+                    Autenticación bancaria
                   </p>
                 </div>
               </div>
               <span className="rounded-full border border-[#64e8e0]/20 bg-[#64e8e0]/[0.07] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#78e8e1]">
-                Research
+                Investigación
               </span>
             </div>
 
@@ -141,7 +141,7 @@ function Hero() {
             </div>
           </div>
           <p className="mt-4 text-center text-[10px] uppercase tracking-[0.18em] text-[#687578]">
-            Secure by design · Built for trust
+            Diseño seguro · Confianza verificable
           </p>
         </div>
       </div>

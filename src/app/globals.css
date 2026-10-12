@@ -16,6 +16,7 @@ body {
   margin: 0;
   background: #050708;
   color: #f4f7f7;
+  font-family: var(--font-manrope), sans-serif;
 }
 
 ::selection {
