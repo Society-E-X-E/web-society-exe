@@ -1,9 +1,7 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import InfoCard from "@/components/info-card";
-import { Typography } from "@material-tailwind/react";
 
 const OPTIONS = [
   {
@@ -36,14 +34,12 @@ export function MobileConvenience() {
           alt="Illustration of a mobile device"
         />
         <div className="col-span-1 mx-auto max-w-lg px-4 lg:px-0">
-          <Typography variant="h2" color="blue-gray" className="mb-4">
+          <h2 className="mb-4 text-3xl font-bold text-slate-800">
             A practical security cycle
-          </Typography>
-          <Typography
-            variant="lead"
-            className="mb-5 px-4 text-left  text-xl !text-gray-500 lg:px-0  "          >
+          </h2>
+          <p className="mb-5 px-4 text-left text-xl text-gray-500 lg:px-0">
             Build resilience through repeatable, responsible steps.
-          </Typography>
+          </p>
 
           <div className="col-span-2 grid gap-5 grid-cols-2 ">
             {OPTIONS.map(({ title, description }) => (

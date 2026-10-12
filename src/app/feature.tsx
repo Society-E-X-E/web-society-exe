@@ -1,8 +1,5 @@
 "use client";
 
-import React from "react";
-import { Typography } from "@material-tailwind/react";
-
 import {
   DeviceTabletIcon,
   LockClosedIcon,
@@ -43,19 +40,16 @@ export function Features() {
   return (
     <section id="services" className="py-28 px-4">
       <div className="container mx-auto mb-20 text-center">
-        <Typography color="blue-gray" className="mb-2 font-bold uppercase">
+        <p className="mb-2 font-bold uppercase text-slate-700">
           Defensive cybersecurity
-        </Typography>
-        <Typography variant="h1" color="blue-gray" className="mb-4">
+        </p>
+        <h2 className="mb-4 text-4xl font-bold text-slate-800">
           Practical security foundations
-        </Typography>
-        <Typography
-          variant="lead"
-          className="mx-auto w-full px-4 !text-gray-500 lg:w-11/12 lg:px-8"
-        >
+        </h2>
+        <p className="mx-auto w-full px-4 text-lg text-gray-500 lg:w-11/12 lg:px-8">
           Focus on authorized, protective practices that help people and
           organizations reduce risk and respond responsibly.
-        </Typography>
+        </p>
       </div>
       <div className="container mx-auto grid max-w-6xl grid-cols-1 gap-4 gap-y-12 md:grid-cols-2">
         {FEATURES.map((props) => (

@@ -1,41 +1,39 @@
 "use client";
-import React from "react";
 
-import { Navbar as MTNavbar } from "@material-tailwind/react/components/Navbar";
-import { Collapse } from "@material-tailwind/react/components/Collapse";
-import { IconButton } from "@material-tailwind/react/components/IconButton";
-import { Typography } from "@material-tailwind/react/components/Typography";
-import { Button } from "@material-tailwind/react/components/Button";
+import { useEffect, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-interface NavItemProps {
-  children: React.ReactNode;
-  href: string;
-}
-function NavItem({ children, href }: NavItemProps) {
-  return (
-    <li>
-      <Typography
-        as="a"
-        href={href}
-        variant="small"
-        className="font-medium"
-      >
-        {children}
-      </Typography>
-    </li>
-  );
-}
+const NAV_ITEMS = [
+  { label: "Home", href: "#home" },
+  { label: "Security", href: "#services" },
+  { label: "Guidance", href: "#approach" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Contact", href: "#contact" },
+];
+
+const SOCIAL_LINKS = [
+  {
+    label: "GitHub",
+    href: "https://www.github.com/ahidroidev",
+    icon: "fa-github",
+  },
+  {
+    label: "Telegram",
+    href: "https://t.me/devcrackpy",
+    icon: "fa-telegram",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/programameste",
+    icon: "fa-instagram",
+  },
+];
 
 export function Navbar() {
-  const [open, setOpen] = React.useState(false);
-  const [isScrolling, setIsScrolling] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
-  function handleOpen() {
-    setOpen((cur) => !cur);
-  }
-
-  React.useEffect(() => {
+  useEffect(() => {
     function handleResize() {
       if (window.innerWidth >= 960) {
         setOpen(false);
@@ -46,128 +44,121 @@ export function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     function handleScroll() {
-      if (window.scrollY > 0) {
-        setIsScrolling(true);
-      } else {
-        setIsScrolling(false);
-      }
+      setIsScrolling(window.scrollY > 0);
     }
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const foreground = isScrolling ? "text-gray-800" : "text-white";
+
   return (
-    <MTNavbar
-      fullWidth
-      shadow={false}
-      blurred={false}
-      color={isScrolling ? "white" : "transparent"}
-      className="fixed top-0 z-50 border-0"    >
-      <div className="container mx-auto flex items-center justify-between">
-        <Typography
-          as="a"
-          href="#home"
-          variant="h6"
-          color={isScrolling ? "gray" : "white"}
-        >
+    <header
+      className={`fixed top-0 z-50 w-full border-0 transition-colors ${
+        isScrolling ? "bg-white shadow-sm" : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto flex items-center justify-between px-4 py-3">
+        <a href="#home" className={`text-lg font-semibold ${foreground}`}>
           Society . E X E
-        </Typography>
-        <ul className={`ml-10 hidden items-center gap-6 lg:flex ${isScrolling ? "text-gray-900" : "text-white"}`}>
-          <NavItem href="#home">Home</NavItem>
-          <NavItem href="#services">Security</NavItem>
-          <NavItem href="#approach">Guidance</NavItem>
-          <NavItem href="#faq">FAQ</NavItem>
-          <NavItem href="#contact">Contact</NavItem>
-        </ul>
-        <div className="hidden gap-2 lg:flex lg:items-center">
-          
-          <a href="https://www.github.com/ahidroidev" target="_blank" rel="noopener" aria-label="Repositorio GitHub">
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"          >
-            <i className="fa-brands fa-github text-base" />
-          </IconButton>
-          </a>
-          <a href="https://t.me/devcrackpy" target="_blank" rel="noopener" aria-label="Telegram Profile">
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"          >
-            <i className="fa-brands fa-telegram text-base" />
-          </IconButton>
-          </a>
-          <a href="https://www.instagram.com/programameste" target="_blank" rel="noopener" aria-label="Instagram Profile">
-          <IconButton
-            variant="text"
-            color={isScrolling ? "gray" : "white"}
-            size="sm"          >
-            <i className="fa-brands fa-instagram text-base" />
-          </IconButton>
-          </a>
-          <a href="https://society-exe.site/status" target="_blank" rel="noopener">
-            <Button color={isScrolling ? "gray" : "white"} size="sm">
-              Status
-            </Button>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul
+            className={`ml-10 hidden items-center gap-6 lg:flex ${foreground}`}
+          >
+            {NAV_ITEMS.map(({ label, href }) => (
+              <li key={href}>
+                <a href={href} className="text-sm font-medium hover:opacity-75">
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div className="hidden items-center gap-4 lg:flex">
+          {SOCIAL_LINKS.map(({ label, href, icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className={`${foreground} hover:opacity-75`}
+            >
+              <i className={`fa-brands ${icon} text-base`} />
+            </a>
+          ))}
+          <a
+            href="https://society-exe.site/status"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`rounded px-3 py-2 text-sm font-medium ${foreground}`}
+          >
+            Status
           </a>
         </div>
-        <IconButton
+        <button
           type="button"
-          variant="text"
-          color={isScrolling ? "gray" : "white"}
-          onClick={handleOpen}
+          onClick={() => setOpen((current) => !current)}
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={open}
           aria-controls="mobile-navigation"
-          className="ml-auto inline-block lg:hidden"
+          className={`ml-auto inline-flex items-center justify-center p-2 lg:hidden ${foreground}`}
         >
           {open ? (
             <XMarkIcon strokeWidth={2} className="h-6 w-6" />
           ) : (
             <Bars3Icon strokeWidth={2} className="h-6 w-6" />
           )}
-        </IconButton>
+        </button>
       </div>
-      <div id="mobile-navigation">
-        <Collapse open={open}>
-        <div className="container mx-auto mt-4 rounded-lg border-t border-blue-gray-50 bg-white px-6 py-5">
-          <ul className="flex flex-col gap-4 text-blue-gray-900">
-            <NavItem href="#home">Home</NavItem>
-            <NavItem href="#services">Security</NavItem>
-            <NavItem href="#approach">Guidance</NavItem>
-            <NavItem href="#faq">FAQ</NavItem>
-            <NavItem href="#contact">Contact</NavItem>
+      {open && (
+        <nav
+          id="mobile-navigation"
+          aria-label="Mobile navigation"
+          className="container mx-auto rounded-lg border-t border-slate-200 bg-white px-6 py-5 text-slate-900 shadow-lg lg:hidden"
+        >
+          <ul className="flex flex-col gap-4">
+            {NAV_ITEMS.map(({ label, href }) => (
+              <li key={href}>
+                <a
+                  href={href}
+                  onClick={() => setOpen(false)}
+                  className="font-medium"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
           </ul>
-          <div className="mt-4 flex items-center gap-2">
-            <a href="https://www.github.com/ahidroidev" target="_blank" rel="noopener" aria-label="Repositorio GitHub">
-            <IconButton variant="text" color="gray" size="sm">
-              <i className="fa-brands fa-github text-base" />
-            </IconButton>
-            </a>
-            <a href="https://t.me/devcrackpy" target="_blank" rel="noopener" aria-label="Telegram Profile">
-            <IconButton variant="text" color="gray" size="sm">
-              <i className="fa-brands fa-telegram text-base" />
-            </IconButton>
-            </a>
-            <a href="https://www.instagram.com/programameste" target="_blank" rel="noopener" aria-label="Instagram Profile">
-            <IconButton variant="text" color="gray" size="sm">
-              <i className="fa-brands fa-instagram text-base" />
-            </IconButton>
-            </a>
-            <a href="https://society-exe.site/status" target="_blank" rel="noopener">
-              <Button color="gray" size="sm" className="ml-auto">
-                Status
-              </Button>
+          <div className="mt-4 flex items-center gap-4">
+            {SOCIAL_LINKS.map(({ label, href, icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="text-gray-700"
+              >
+                <i className={`fa-brands ${icon} text-base`} />
+              </a>
+            ))}
+            <a
+              href="https://society-exe.site/status"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-auto rounded bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+            >
+              Status
             </a>
           </div>
-        </div>
-        </Collapse>
-      </div>
-    </MTNavbar>
+        </nav>
+      )}
+    </header>
   );
 }
 

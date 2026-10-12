@@ -1,0 +1,299 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Recheck dependency inventory",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"outdated",
+				"--json"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check runtime and peer deps",
+			"type": "shell",
+			"command": "cmd.exe",
+			"args": [
+				"/c",
+				"node --version && npm --version && npm view @material-tailwind/react@latest peerDependencies && npm view next@latest engines"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check Node runtime",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"--version"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Preview audit fixes",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"audit",
+				"fix",
+				"--dry-run",
+				"--json"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check Material peer support",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"view",
+				"@material-tailwind/react@latest",
+				"peerDependencies"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check update-compatible releases",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"view",
+				"@types/node@24",
+				"version",
+				"dist-tags.latest",
+				"&&",
+				"npm",
+				"view",
+				"postcss@8",
+				"version",
+				"dist-tags.latest"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check Next ESLint peers",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"view",
+				"eslint-config-next@15.5.27",
+				"peerDependencies"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Summarize production audit",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"audit",
+				"--omit=dev"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check Next runtime floor",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"view",
+				"next@15.5.27",
+				"engines",
+				"peerDependencies"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check ESLint plugin peers",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"view",
+				"@typescript-eslint/eslint-plugin@latest",
+				"peerDependencies"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check Next16 runtime peers",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"view",
+				"next@latest",
+				"engines",
+				"peerDependencies"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check ESLint ecosystem",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"view",
+				"eslint@latest",
+				"engines",
+				"&&",
+				"npm",
+				"view",
+				"@next/eslint-plugin-next@latest",
+				"peerDependencies"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check Tailwind4 migration deps",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"view",
+				"@tailwindcss/postcss@latest",
+				"peerDependencies"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Patch Next security release",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install",
+				"next@15.5.27"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Audit patched production deps",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"audit",
+				"--omit=dev"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Apply compatible audit fixes",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"audit",
+				"fix"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Remove incompatible unused UI",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"uninstall",
+				"@material-tailwind/react",
+				"@vercel/analytics",
+				"autoprefixer",
+				"postcss",
+				"eslint-config-next"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Upgrade production packages",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install",
+				"@heroicons/react@latest",
+				"@logtail/node@latest",
+				"next@latest",
+				"react@latest",
+				"react-dom@latest"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Upgrade build toolchain",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install",
+				"--save-dev",
+				"@eslint/js@latest",
+				"@next/eslint-plugin-next@latest",
+				"@tailwindcss/postcss@latest",
+				"@types/node@24",
+				"@types/react@latest",
+				"@types/react-dom@latest",
+				"eslint@latest",
+				"@typescript-eslint/eslint-plugin@latest",
+				"@typescript-eslint/parser@latest",
+				"tailwindcss@latest",
+				"typescript@6"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Build updated stack",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "List outdated after upgrade",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"outdated",
+				"--json"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		}
+	]
+}
