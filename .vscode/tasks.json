@@ -306,6 +306,94 @@
 			"isBackground": false,
 			"problemMatcher": [],
 			"group": "test"
+		},
+		{
+			"label": "Check dependency install state",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"ls",
+				"--depth=0"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Full upgraded dependency audit",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"audit"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Trace ESLint dependency advisory",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"ls",
+				"fast-glob",
+				"micromatch",
+				"braces",
+				"--all"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check patched braces version",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"view",
+				"braces",
+				"version",
+				"dist-tags"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Remove vulnerable Next lint plugin",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"uninstall",
+				"--save-dev",
+				"@next/eslint-plugin-next"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Verify dependency audit status",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"audit"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Check remaining outdated packages",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"outdated",
+				"--json"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
 		}
 	]
 }

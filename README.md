@@ -6,7 +6,7 @@ design, security awareness, and incident readiness.
 
 ## Run locally
 
-1. Install Node.js 20.9 or later.
+1. Install Node.js 22.13 or later (Node.js 24 LTS is used in CI).
 2. Install dependencies with `npm install`.
 3. Start the development server with `npm run dev`.
 4. Open [http://localhost:3000](http://localhost:3000).

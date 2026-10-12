@@ -1,7 +1,6 @@
 import js from "@eslint/js";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
-import nextPlugin from "@next/eslint-plugin-next";
 
 export default [
   {
@@ -30,12 +29,9 @@ export default [
     },
     plugins: {
       "@typescript-eslint": tseslint,
-      "@next/next": nextPlugin,
     },
     rules: {
       ...tseslint.configs.recommended.rules,
-      ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs["core-web-vitals"].rules,
     },
   },
   {
