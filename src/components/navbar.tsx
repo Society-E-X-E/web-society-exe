@@ -53,12 +53,12 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const foreground = isScrolling ? "text-gray-800" : "text-white";
+  const foreground = "text-white";
 
   return (
     <header
       className={`fixed top-0 z-50 w-full border-0 transition-colors ${
-        isScrolling ? "bg-white shadow-sm" : "bg-transparent"
+        isScrolling ? "bg-[#0b1012] shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:px-6">
@@ -124,7 +124,7 @@ export function Navbar() {
         id="mobile-navigation"
         aria-label="Navegación móvil"
         hidden={!open}
-        className="container mx-auto rounded-lg border-t border-slate-200 bg-white px-6 py-5 text-slate-900 shadow-lg lg:hidden"
+        className="container mx-auto rounded-lg border-t border-white/10 bg-[#0b1012] px-6 py-5 text-white shadow-lg lg:hidden"
       >
         <ul className="flex flex-col gap-4">
           {NAV_ITEMS.map(({ label, href }) => (
@@ -147,7 +147,7 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="text-gray-700"
+              className="text-white"
             >
               <i className={`fa-brands ${icon} text-base`} />
             </a>
@@ -156,7 +156,7 @@ export function Navbar() {
             href="https://society-exe.site/status"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-auto rounded bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+            className="ml-auto rounded bg-[#64e8e0]/10 px-3 py-2 text-sm font-medium text-[#79ebe4]"
           >
             Estado
           </a>
