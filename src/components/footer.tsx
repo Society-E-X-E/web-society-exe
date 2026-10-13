@@ -66,14 +66,14 @@ export function Footer() {
               href="mailto:Info@society-exe.site"
               className="transition hover:text-[#79ebe4]"
             >
-              <i className="fa-brands fa-gmail text-lg" />
                Info@society-exe.site
             </a>
             <a
               href="https://wa.me/573223213752"
               className="transition hover:text-[#79ebe4]"
             >
-              <i className="fa-brands fa-whatsapp text-lg" />
+              <i className="fa-brands fa-whatsapp text-lg"/>
+
                Whatsapp Business
             </a>
 
