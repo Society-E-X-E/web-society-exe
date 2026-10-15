@@ -64,17 +64,17 @@ export function Footer() {
           <address className="flex flex-col gap-2 text-sm not-italic text-[#acb6b7] sm:items-end">
             <a
               href="mailto:Info@society-exe.site"
-              className="transition hover:text-[#79ebe4]"
+              className="inline-flex items-center gap-2 transition hover:text-[#79ebe4]"
             >
-               Info@society-exe.site
+              <i className="fa-solid fa-envelope text-lg" aria-hidden="true" />
+              Info@society-exe.site
             </a>
             <a
               href="https://wa.me/573223213752"
-              className="transition hover:text-[#79ebe4]"
+              className="inline-flex items-center gap-2 transition hover:text-[#79ebe4]"
             >
-              <i className="fa-brands fa-whatsapp text-lg"/>
-
-               Whatsapp Business
+              <i className="fa-brands fa-whatsapp text-lg" aria-hidden="true" />
+              WhatsApp Business
             </a>
 
           </address>
