@@ -1,15 +1,23 @@
 const FAQS = [
   {
-    title: "¿El nuevo método OTP ya está disponible?",
-    desc: "No. El método está en etapa de definición. Sus características se comunicarán cuando el alcance y la evaluación estén acordados.",
+    title: "¿Qué es OTP-X?",
+    desc: "Es una propuesta de autenticación bancaria en etapa de definición que explora una evaluación más amplia del contexto de acceso. No se publican detalles de diseño ni de implementación.",
   },
   {
-    title: "¿El método cuenta con certificación bancaria?",
-    desc: "No anunciamos una certificación obtenida. La certificación será una etapa futura sujeta a los requisitos de los organismos competentes.",
+    title: "¿OTP-X ya está disponible?",
+    desc: "No. El proyecto continúa en investigación y definición, y no se ofrece como producto o servicio.",
+  },
+  {
+    title: "¿OTP-X cuenta con certificación o aprobación?",
+    desc: "Actualmente no cuenta con certificación ni aprobación regulatoria. Cualquier evaluación formal dependerá de etapas futuras y de los organismos competentes.",
+  },
+  {
+    title: "¿Dónde puedo consultar la documentación del proyecto?",
+    desc: "La información técnica y legal se comparte únicamente con personas autorizadas. El sitio publica solo información general y no divulga detalles sujetos a confidencialidad.",
   },
   {
     title: "¿Qué experiencia respalda este proyecto?",
-    desc: "Experiencia en software para terminales Ingenico y Dspread, integración EMV e ISO 8583, y trabajo con DUKPT y EFTSEC.",
+    desc: "Experiencia profesional en desarrollo para terminales de pago e integración de sistemas financieros. Esta trayectoria no representa una evaluación ni certificación de OTP-X.",
   },
   {
     title: "¿Cómo podemos conversar sobre una colaboración?",

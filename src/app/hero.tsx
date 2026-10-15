@@ -25,8 +25,9 @@ function Hero() {
           </h1>
           <p className="mt-7 max-w-2xl text-base leading-8 text-[#a6b0b2] sm:text-lg">
             Ingeniería de seguridad y tecnología de pagos para crear sistemas
-            más sólidos. Estamos desarrollando una nueva propuesta de método
-            OTP para banca, con evaluación rigurosa como parte del camino.
+            más sólidos. Investigamos OTP-X, una propuesta de autenticación
+            bancaria que explora una evaluación más amplia del contexto de
+            acceso. Su alcance sigue en definición.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
@@ -105,10 +106,10 @@ function Hero() {
               </div>
               <div className="mt-8 text-center">
                 <p className="text-xs uppercase tracking-[0.2em] text-[#829093]">
-                  Próxima frontera
+                  Proyecto en investigación
                 </p>
                 <p className="mt-2 text-xl font-semibold tracking-tight text-white sm:text-2xl">
-                  Investigación en autenticación OTP
+                  OTP-X
                 </p>
               </div>
             </div>

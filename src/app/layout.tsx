@@ -10,13 +10,13 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Society . E X E | Seguridad bancaria y tecnología de pagos",
+  title: "OTP-X | Society . E X E",
   description:
-    "Ingeniería de seguridad financiera, tecnología de pagos y desarrollo de un nuevo enfoque de autenticación OTP bancaria.",
+    "Society . E X E investiga OTP-X, una propuesta de autenticación bancaria en etapa de definición.",
   openGraph: {
-    title: "Society . E X E | Seguridad bancaria y tecnología de pagos",
+    title: "OTP-X | Society . E X E",
     description:
-      "Ingeniería de seguridad financiera y tecnología de pagos con una visión centrada en la confianza.",
+      "Investigación de una propuesta de autenticación bancaria. Proyecto en etapa de definición.",
     locale: "es_CO",
     type: "website",
   },

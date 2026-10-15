@@ -30,7 +30,7 @@ export function Footer() {
             </h2>
             <p className="mt-4 text-sm leading-7 text-[#9ca8aa]">
               Hablemos sobre sistemas de pago, arquitectura de seguridad o la
-              evolución de la autenticación bancaria.
+              investigación de autenticación bancaria OTP-X.
             </p>
           </div>
           <a

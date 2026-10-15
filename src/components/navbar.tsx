@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const NAV_ITEMS = [
   { label: "Inicio", href: "#home" },
-  { label: "Método OTP", href: "#otp" },
+  { label: "OTP-X", href: "#otp" },
   { label: "Experiencia", href: "#experience" },
   { label: "Enfoque", href: "#approach" },
   { label: "Contacto", href: "#contact" },

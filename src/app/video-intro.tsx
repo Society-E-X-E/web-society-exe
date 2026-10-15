@@ -1,9 +1,9 @@
 const DESIGN_PILLARS = [
   {
     number: "01",
-    title: "Diseño del método",
+    title: "Diseño de OTP-X",
     description:
-      "Definir objetivos, modelo de amenazas y requisitos de integración para un nuevo método OTP bancario.",
+      "Explorar una propuesta de autenticación bancaria centrada en evaluar el contexto del acceso.",
   },
   {
     number: "02",
@@ -40,12 +40,13 @@ export function VideoIntro() {
               id="otp-heading"
               className="text-4xl font-semibold leading-tight tracking-[-0.04em] text-white sm:text-5xl"
             >
-              Un nuevo enfoque para la autenticación OTP bancaria.
+              OTP-X: investigación en autenticación bancaria.
             </h2>
             <p className="mt-6 text-base leading-8 text-[#a6b0b2]">
-              El proyecto central de Society . E X E es diseñar un nuevo método
-              de código de un solo uso pensado para el entorno financiero. La
-              propuesta se presentará cuando su alcance técnico esté definido.
+              OTP-X es una propuesta en etapa de definición que explora cómo
+              complementar la autenticación de un solo uso con una evaluación
+              más amplia del contexto de acceso. El diseño detallado y la
+              documentación del proyecto no son información pública.
             </p>
             <a
               href="mailto:info@society-exe.site?subject=Consulta%20sobre%20autenticaci%C3%B3n%20OTP"
@@ -106,9 +107,9 @@ export function VideoIntro() {
               ))}
             </div>
             <p className="mt-8 border-t border-white/10 pt-5 text-xs leading-6 text-[#758184]">
-              La certificación dependerá de una evaluación formal por los
-              organismos competentes. No se afirma que el método esté certificado
-              ni aprobado actualmente.
+              OTP-X no está disponible comercialmente ni cuenta con
+              certificación o aprobación regulatoria anunciada. Cualquier
+              evaluación formal corresponde a una etapa futura.
             </p>
           </div>
         </div>
