@@ -38,7 +38,7 @@ function Hero() {
               <span aria-hidden="true">↗</span>
             </a>
             <a
-              href="mailto:info@society-exe.site"
+              href="https://wa.me/573223213752"
               className="inline-flex min-h-13 items-center justify-center rounded-full border border-white/20 px-7 py-3 text-sm font-semibold text-white transition hover:border-[#64e8e0]/70 hover:text-[#8df0e9]"
             >
               Contactar al equipo
