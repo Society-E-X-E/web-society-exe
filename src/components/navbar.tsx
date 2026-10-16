@@ -97,9 +97,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="https://society-exe.site/status"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/status"
             className={`rounded px-3 py-2 text-sm font-medium ${foreground}`}
           >
             Status
@@ -153,9 +151,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="https://society-exe.site/status"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/status"
             className="ml-auto rounded bg-[#64e8e0]/10 px-3 py-2 text-sm font-medium text-[#79ebe4]"
           >
             Estado
