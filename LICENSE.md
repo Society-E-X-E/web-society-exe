@@ -1,9 +1,26 @@
-# MIT License
+# Licencia privada y reservada
 
-Copyright (c) 2023-2024 [Society . E X E](https://waexe.dev/)
+**Proyecto:** OTP-X
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+**Titular del núcleo tecnológico del Proyecto Base:** Ahiézer Rada, fundador y CTO de Society . E X E
+**Copyright:** © 2023–2026 Ahiézer Rada. Todos los derechos reservados.
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+El código fuente, la arquitectura, los algoritmos, la metodología y la
+documentación propios de OTP-X son confidenciales y de uso restringido. No se
+concede mediante la entrega, publicación o acceso a este repositorio ninguna
+licencia ni autorización, expresa o implícita, para usar, ejecutar, copiar,
+modificar, adaptar, publicar, distribuir, sublicenciar, comercializar o crear
+obras derivadas de dichos materiales.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Cualquier uso o divulgación requiere autorización previa, expresa y por escrito
+del titular. El acceso autorizado al repositorio, si lo hubiera, no transfiere
+la titularidad ni amplía el permiso concedido.
+
+Esta reserva se refiere al núcleo tecnológico de OTP-X descrito en el Rawdata
+del Proyecto Society . E X E. No pretende atribuir al titular aportes
+preexistentes de terceros: cada parte conserva los derechos sobre sus propios
+aportes. Los componentes de terceros, si los hubiera, se rigen por sus
+respectivas licencias y avisos.
+
+Este aviso resume la intención de mantener el proyecto como privado y
+reservado; no sustituye acuerdos firmados aplicables ni asesoría legal.
