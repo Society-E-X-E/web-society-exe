@@ -78,23 +78,36 @@ export function Footer() {
             </a>
 
           </address>
-          <nav aria-label="Redes sociales">
-            <ul className="flex items-center gap-5">
-              {SOCIAL_LINKS.map(({ label, href, icon }) => (
-                <li key={label}>
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={label}
-                    className="text-[#9ca8aa] transition hover:text-[#79ebe4]"
-                  >
-                    <i className={`fa-brands ${icon} text-lg`} />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <div className="flex flex-col gap-4 sm:items-end">
+            <nav aria-label="Redes sociales">
+              <ul className="flex items-center gap-5">
+                {SOCIAL_LINKS.map(({ label, href, icon }) => (
+                  <li key={label}>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                      className="text-[#9ca8aa] transition hover:text-[#79ebe4]"
+                    >
+                      <i className={`fa-brands ${icon} text-lg`} />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <nav
+              aria-label="Información legal"
+              className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-[#9ca8aa]"
+            >
+              <a href="/terms" className="transition hover:text-[#79ebe4]">
+                Términos
+              </a>
+              <a href="/privacy" className="transition hover:text-[#79ebe4]">
+                Privacidad
+              </a>
+            </nav>
+          </div>
         </div>
       </footer>
     </>

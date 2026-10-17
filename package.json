@@ -3,7 +3,7 @@
   "version": "2.1.0",
   "private": true,
   "author": "DevCrack",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "homepage": "./public",
   "engines": {
     "node": "^22.13.0 || >=24.0.0"
