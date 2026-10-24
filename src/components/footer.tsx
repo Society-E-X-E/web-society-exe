@@ -51,7 +51,7 @@ export function Footer() {
             <a href="#home" className="flex items-center gap-3">
               <img
                 src="/wordmark/logo-workmark-for-dark-background.png"
-                alt="Society . E X E"></img>
+                alt="Society . E X E"/>
             </a>
             <p className="mt-4 text-xs text-[#7e8b8e]">
               © {new Date().getFullYear()} Society . E X E · Ingeniería y

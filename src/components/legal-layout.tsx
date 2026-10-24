@@ -25,9 +25,9 @@ export function LegalLayout({
       <header className="border-b border-white/10 bg-[#080d0f]">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-5 sm:px-10">
           <a href="/" className="flex items-center gap-3" aria-label="Society . E X E, inicio">
-            <span className="grid h-9 w-9 place-items-center rounded-lg border border-[#64e8e0]/40 bg-[#64e8e0]/10 text-[11px] font-extrabold tracking-[-0.08em] text-[#79ebe4]">
-              . E X E
-            </span>
+            <img
+              src="/isotipo/logo-mark-for-dark.png"
+              alt="Society . E X E"/>
             <span className="text-sm font-semibold tracking-wide text-white">
               Society . E X E
             </span>

@@ -65,11 +65,10 @@ export function Navbar() {
         <a href="#home" className="flex items-center gap-3">
           <img
             src="/isotipo/logo-mark-for-dark.png"
-            alt="Society . E X E">
+            alt="Society . E X E"/>
           <span className={`text-sm font-semibold tracking-wide ${foreground}`}>
             Society . E X E
           </span>
-          </img>
         </a>
         <nav aria-label="Navegación principal">
           <ul
