@@ -49,12 +49,9 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col gap-7 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <a href="#home" className="flex items-center gap-3">
-              <span className="grid h-9 w-9 place-items-center rounded-lg border border-[#64e8e0]/35 bg-[#64e8e0]/10 text-[11px] font-extrabold tracking-[-0.08em] text-[#79ebe4]">
-                . E X E
-              </span>
-              <span className="text-sm font-semibold text-white">
-                Society . E X E
-              </span>
+              <img
+                src="/wordmark/logo-workmark-for-dark-background.png"
+                alt="Society . E X E"></img>
             </a>
             <p className="mt-4 text-xs text-[#7e8b8e]">
               © {new Date().getFullYear()} Society . E X E · Ingeniería y
