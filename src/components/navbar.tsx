@@ -63,12 +63,13 @@ export function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:px-6">
         <a href="#home" className="flex items-center gap-3">
-          <span className="grid h-9 w-9 place-items-center rounded-lg border border-[#64e8e0]/40 bg-[#64e8e0]/10 text-[11px] font-extrabold tracking-[-0.08em] text-[#79ebe4]">
-            . E X E
-          </span>
+          <img
+            src="/isotipo/logo-mark-for-dark.png"
+            alt="Society . E X E">
           <span className={`text-sm font-semibold tracking-wide ${foreground}`}>
             Society . E X E
           </span>
+          </img>
         </a>
         <nav aria-label="Navegación principal">
           <ul
