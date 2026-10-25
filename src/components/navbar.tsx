@@ -63,9 +63,7 @@ export function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:px-6">
         <a href="#home" className="flex items-center gap-3">
-          <img
-            src="/isotipo/logo-mark-for-dark.png"
-            alt="Society . E X E"/>
+          <img src="/isotipo/logo-mark-for-dark.png" alt="Society . E X E" />
           <span className={`text-sm font-semibold tracking-wide ${foreground}`}>
             Society . E X E
           </span>
