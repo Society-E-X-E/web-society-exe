@@ -24,16 +24,16 @@ export function VideoIntro() {
     <section
       id="otp"
       aria-labelledby="otp-heading"
-      className="relative overflow-hidden bg-[#0a0f11] px-6 py-24 sm:px-10 lg:px-12 lg:py-32"
+      className="relative overflow-hidden bg-[#11141A] px-6 py-24 sm:px-10 lg:px-12 lg:py-32"
     >
       <div
         aria-hidden="true"
-        className="absolute -right-40 top-10 h-96 w-96 rounded-full bg-[#40d9d1]/[0.07] blur-3xl"
+        className="absolute -right-40 top-10 h-96 w-96 rounded-full bg-[#22D3EE]/[0.07] blur-3xl"
       />
       <div className="relative mx-auto max-w-7xl">
         <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#71e5df]">
+            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#22D3EE]">
               Servicio en desarrollo
             </p>
             <h2
@@ -56,7 +56,7 @@ export function VideoIntro() {
             </a>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-[#0e1517] p-6 sm:p-9">
+          <div className="rounded-3xl border border-white/10 bg-[#11141A] p-6 sm:p-9">
             <div className="mb-8 flex items-center justify-between border-b border-white/10 pb-5">
               <div>
                 <p className="text-sm font-semibold text-white">
@@ -66,7 +66,7 @@ export function VideoIntro() {
                   Un recorrido transparente y por etapas
                 </p>
               </div>
-              <span className="grid h-10 w-10 place-items-center rounded-full border border-[#64e8e0]/25 text-[#64e8e0]">
+              <span className="grid h-10 w-10 place-items-center rounded-full border border-[#22D3EE]/25 text-[#22D3EE]">
                 <svg
                   aria-hidden="true"
                   viewBox="0 0 24 24"
@@ -92,7 +92,7 @@ export function VideoIntro() {
             <div className="space-y-7">
               {DESIGN_PILLARS.map(({ number, title, description }) => (
                 <article key={number} className="grid grid-cols-[3rem_1fr] gap-4">
-                  <span className="pt-0.5 font-mono text-sm text-[#64e8e0]">
+                  <span className="pt-0.5 font-mono text-sm text-[#22D3EE]">
                     {number}
                   </span>
                   <div>

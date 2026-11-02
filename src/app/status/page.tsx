@@ -71,26 +71,27 @@ const ROADMAP = [
 
 function SocietyMark() {
   return (
-    <a href="/" className="flex items-center gap-3" aria-label="Society . E X E, inicio">
-      <span className="grid h-9 w-9 place-items-center rounded-lg border border-[#64e8e0]/40 bg-[#64e8e0]/10 text-[11px] font-extrabold tracking-[-0.08em] text-[#79ebe4]">
-        . E X E
-      </span>
-      <span className="text-sm font-semibold tracking-wide text-white">
-        Society . E X E
-      </span>
+    <a href="/" className="flex items-center" aria-label="Society . E X E, inicio">
+      <img
+        src="/wordmark/logo-wordmark-for-dark-backgrounds.svg"
+        alt="Society . E X E"
+        width="204"
+        height="35"
+        className="h-[30px] w-auto sm:h-[35px]"
+      />
     </a>
   );
 }
 
 export default function StatusPage() {
   return (
-    <main className="min-h-screen bg-[#050708]">
-      <header className="border-b border-white/10 bg-[#080d0f]">
+    <main className="min-h-screen bg-[#090D13]">
+      <header className="border-b border-white/10 bg-[#11141A]">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 sm:px-10 lg:px-12">
           <SocietyMark />
           <a
             href="/"
-            className="rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-[#dce4e4] transition hover:border-[#64e8e0]/60 hover:text-[#79ebe4]"
+            className="rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-[#dce4e4] transition hover:border-[#22D3EE]/60 hover:text-[#22D3EE]"
           >
             Volver al sitio
           </a>
@@ -100,10 +101,10 @@ export default function StatusPage() {
       <section className="relative overflow-hidden px-6 pb-16 pt-16 sm:px-10 sm:pb-20 sm:pt-24 lg:px-12">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-[#40d9d1]/[0.08] blur-3xl"
+          className="pointer-events-none absolute -right-40 top-0 h-96 w-96 rounded-full bg-[#22D3EE]/[0.08] blur-3xl"
         />
         <div className="relative mx-auto max-w-4xl">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#71e5df]">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#22D3EE]">
             Registro público de avance
           </p>
           <h1 className="text-4xl font-semibold tracking-[-0.05em] text-white sm:text-6xl">
@@ -120,8 +121,8 @@ export default function StatusPage() {
           </p>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-[1fr_auto] sm:items-stretch">
-            <div className="rounded-2xl border border-[#64e8e0]/20 bg-[#0c1516] p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#73e5df]">
+            <div className="rounded-2xl border border-[#22D3EE]/20 bg-[#11141A] p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#22D3EE]">
                 Estado general
               </p>
               <p className="mt-3 text-xl font-semibold text-white">
@@ -132,7 +133,7 @@ export default function StatusPage() {
                 regulatoria anunciadas.
               </p>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-[#0c1113] p-6 sm:min-w-48">
+            <div className="rounded-2xl border border-white/10 bg-[#11141A] p-6 sm:min-w-48">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#829093]">
                 Revisión del estado
               </p>
@@ -149,11 +150,11 @@ export default function StatusPage() {
 
       <section
         aria-labelledby="roadmap-heading"
-        className="border-y border-white/10 bg-[#0a0f11] px-6 py-16 sm:px-10 sm:py-20 lg:px-12"
+        className="border-y border-white/10 bg-[#11141A] px-6 py-16 sm:px-10 sm:py-20 lg:px-12"
       >
         <div className="mx-auto max-w-4xl">
           <div className="mb-10 max-w-2xl">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#71e5df]">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#22D3EE]">
               Progreso por etapas
             </p>
             <h2
@@ -169,20 +170,20 @@ export default function StatusPage() {
             </p>
           </div>
 
-          <ol className="relative space-y-0 before:absolute before:bottom-8 before:left-[15px] before:top-4 before:w-px before:bg-gradient-to-b before:from-[#64e8e0]/70 before:to-white/5">
+          <ol className="relative space-y-0 before:absolute before:bottom-8 before:left-[15px] before:top-4 before:w-px before:bg-gradient-to-b before:from-[#22D3EE]/70 before:to-white/5">
             {ROADMAP.map(({ number, title, status, state, description }) => (
               <li key={number} className="relative pb-7 pl-12 last:pb-0">
                 <span
                   aria-hidden="true"
                   className={`absolute left-0 top-1 grid h-8 w-8 place-items-center rounded-full border text-[10px] font-bold ${
                     state === "current"
-                      ? "border-[#64e8e0]/60 bg-[#0c2020] text-[#79ebe4] shadow-[0_0_18px_rgba(100,232,224,0.16)]"
-                      : "border-white/15 bg-[#0b1012] text-[#829093]"
+                      ? "border-[#22D3EE]/60 bg-[#0c2020] text-[#22D3EE] shadow-[0_0_18px_rgba(34,211,238,0.16)]"
+                      : "border-white/15 bg-[#11141A] text-[#829093]"
                   }`}
                 >
                   {number}
                 </span>
-                <article className="rounded-2xl border border-white/10 bg-[#0c1113] p-5 sm:p-6">
+                <article className="rounded-2xl border border-white/10 bg-[#11141A] p-5 sm:p-6">
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                     <h3 className="text-base font-semibold text-[#f0f4f4] sm:text-lg">
                       {title}
@@ -190,7 +191,7 @@ export default function StatusPage() {
                     <span
                       className={`w-fit shrink-0 rounded-full border px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] ${
                         state === "current"
-                          ? "border-[#64e8e0]/25 bg-[#64e8e0]/[0.07] text-[#78e8e1]"
+                          ? "border-[#22D3EE]/25 bg-[#22D3EE]/[0.07] text-[#22D3EE]"
                           : "border-white/10 bg-white/[0.03] text-[#9ca8aa]"
                       }`}
                     >
@@ -213,7 +214,7 @@ export default function StatusPage() {
       >
         <div className="mx-auto grid max-w-4xl gap-8 lg:grid-cols-[0.7fr_1.3fr]">
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#71e5df]">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#22D3EE]">
               Alcance de esta publicación
             </p>
             <h2
@@ -252,7 +253,7 @@ export default function StatusPage() {
         </div>
       </section>
 
-      <footer className="border-t border-white/10 bg-[#050708] px-6 py-7 sm:px-10 lg:px-12">
+      <footer className="border-t border-white/10 bg-[#090D13] px-6 py-7 sm:px-10 lg:px-12">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <SocietyMark />
           <p className="text-xs leading-6 text-[#7e8b8e]">
@@ -261,7 +262,7 @@ export default function StatusPage() {
           </p>
           <a
             href="/"
-            className="text-sm font-medium text-[#acb6b7] transition hover:text-[#79ebe4]"
+            className="text-sm font-medium text-[#acb6b7] transition hover:text-[#22D3EE]"
           >
             Inicio
           </a>

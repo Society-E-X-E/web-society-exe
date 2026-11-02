@@ -43,11 +43,11 @@ export function Features() {
     <section
       id="services"
       aria-labelledby="services-heading"
-      className="bg-[#050708] px-6 py-24 sm:px-10 lg:px-12 lg:py-32"
+      className="bg-[#090D13] px-6 py-24 sm:px-10 lg:px-12 lg:py-32"
     >
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 max-w-2xl">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#71e5df]">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#22D3EE]">
             Capacidades
           </p>
           <h2

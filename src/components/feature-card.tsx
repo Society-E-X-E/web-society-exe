@@ -14,9 +14,9 @@ export function FeatureCard({
   children,
 }: FeatureCardProps) {
   return (
-    <article className="group rounded-2xl border border-white/10 bg-[#0b1012] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#64e8e0]/35 hover:bg-[#0e1517] sm:p-8">
+    <article className="group rounded-2xl border border-white/10 bg-[#11141A] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#22D3EE]/35 hover:bg-[#11141A] sm:p-8">
       <div className="mb-9 flex items-start justify-between">
-        <div className="grid h-12 w-12 place-items-center rounded-xl border border-[#64e8e0]/20 bg-[#64e8e0]/[0.07] text-[#70e9e2] transition group-hover:bg-[#64e8e0]/[0.12]">
+        <div className="grid h-12 w-12 place-items-center rounded-xl border border-[#22D3EE]/20 bg-[#22D3EE]/[0.07] text-[#22D3EE] transition group-hover:bg-[#22D3EE]/[0.12]">
           <Icon className="h-5 w-5" aria-hidden="true" />
         </div>
         <span className="font-mono text-[10px] uppercase tracking-[0.16em] text-[#718083]">
