@@ -2,11 +2,11 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden border-b border-white/10 bg-[#050708] px-6 pb-20 pt-36 sm:px-10 sm:pt-44 lg:px-12 lg:pb-28"
+      className="relative isolate overflow-hidden border-b border-white/10 bg-[#090D13] px-6 pb-20 pt-36 sm:px-10 sm:pt-44 lg:px-12 lg:pb-28"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_78%_42%,rgba(47,230,220,0.13),transparent_36%),linear-gradient(135deg,transparent_45%,rgba(255,255,255,0.025))]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_78%_42%,rgba(34,211,238,0.13),transparent_36%),linear-gradient(135deg,transparent_45%,rgba(255,255,255,0.025))]"
       />
       <div
         aria-hidden="true"
@@ -15,13 +15,13 @@ function Hero() {
 
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="max-w-3xl">
-          <p className="mb-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-[#70e9e2]">
-            <span className="h-px w-8 bg-[#70e9e2]" />
+          <p className="mb-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-[#22D3EE]">
+            <span className="h-px w-8 bg-[#22D3EE]" />
             Seguridad para el ecosistema financiero
           </p>
-          <h1 className="max-w-3xl text-5xl font-semibold leading-[1.06] tracking-[-0.055em] text-[#f4f7f7] sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-3xl text-5xl font-semibold leading-[1.06] tracking-[-0.055em] text-[#F6F8FA] sm:text-6xl lg:text-7xl">
             La confianza financiera empieza con una{" "}
-            <span className="text-[#65e8e1]">autenticación mejor diseñada.</span>
+            <span className="text-[#22D3EE]">autenticación mejor diseñada.</span>
           </h1>
           <p className="mt-7 max-w-2xl text-base leading-8 text-[#a6b0b2] sm:text-lg">
             Ingeniería de seguridad y tecnología de pagos para crear sistemas
@@ -32,14 +32,14 @@ function Hero() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="#otp"
-              className="inline-flex min-h-13 items-center justify-center gap-3 rounded-full bg-[#64e8e0] px-7 py-3 text-sm font-bold text-[#061012] transition hover:bg-[#9af7f1]"
+              className="inline-flex min-h-13 items-center justify-center gap-3 rounded-full bg-[#22D3EE] px-7 py-3 text-sm font-bold text-[#090D13] transition hover:bg-[#F6F8FA]"
             >
               Conoce nuestra visión
               <span aria-hidden="true">↗</span>
             </a>
             <a
               href="https://wa.me/573223213752"
-              className="inline-flex min-h-13 items-center justify-center rounded-full border border-white/20 px-7 py-3 text-sm font-semibold text-white transition hover:border-[#64e8e0]/70 hover:text-[#8df0e9]"
+              className="inline-flex min-h-13 items-center justify-center rounded-full border border-white/20 px-7 py-3 text-sm font-semibold text-white transition hover:border-[#22D3EE]/70 hover:text-[#22D3EE]"
             >
               Contactar al equipo
             </a>
@@ -53,12 +53,12 @@ function Hero() {
         <div className="relative mx-auto w-full max-w-[34rem]">
           <div
             aria-hidden="true"
-            className="absolute inset-10 rounded-full bg-[#3dd8d0]/10 blur-3xl"
+            className="absolute inset-10 rounded-full bg-[#22D3EE]/10 blur-3xl"
           />
-          <div className="relative rounded-[2rem] border border-white/10 bg-[#0c1113]/90 p-5 shadow-[0_32px_100px_rgba(0,0,0,0.55)] backdrop-blur-xl sm:p-8">
+          <div className="relative rounded-[2rem] border border-white/10 bg-[#11141A]/90 p-5 shadow-[0_32px_100px_rgba(0,0,0,0.55)] backdrop-blur-xl sm:p-8">
             <div className="flex items-center justify-between border-b border-white/10 pb-5">
               <div className="flex items-center gap-3">
-                <div className="grid h-10 w-10 place-items-center rounded-xl border border-[#64e8e0]/30 bg-[#64e8e0]/10 text-[#64e8e0]">
+                <div className="grid h-10 w-10 place-items-center rounded-xl border border-[#22D3EE]/30 bg-[#22D3EE]/10 text-[#22D3EE]">
                   <svg
                     aria-hidden="true"
                     viewBox="0 0 24 24"
@@ -89,18 +89,21 @@ function Hero() {
                   </p>
                 </div>
               </div>
-              <span className="rounded-full border border-[#64e8e0]/20 bg-[#64e8e0]/[0.07] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#78e8e1]">
+              <span className="rounded-full border border-[#22D3EE]/20 bg-[#22D3EE]/[0.07] px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#22D3EE]">
                 Investigación
               </span>
             </div>
 
             <div className="py-9">
-              <div className="mx-auto grid h-44 w-44 place-items-center rounded-full border border-[#64e8e0]/20 bg-[radial-gradient(circle,rgba(100,232,224,0.12),rgba(12,17,19,0.2)_67%)] sm:h-52 sm:w-52">
-                <div className="grid h-32 w-32 place-items-center rounded-full border border-[#64e8e0]/30 sm:h-40 sm:w-40">
-                  <div className="grid h-20 w-20 place-items-center rounded-3xl border border-[#64e8e0]/40 bg-[#0e2021] shadow-[0_0_42px_rgba(100,232,224,0.16)] sm:h-24 sm:w-24">
-                    <span className="text-2xl font-semibold tracking-[0.14em] text-[#8af4ed] sm:text-3xl">
-                      .EXE
-                    </span>
+              <div className="mx-auto grid h-44 w-44 place-items-center rounded-full border border-[#22D3EE]/20 bg-[radial-gradient(circle,rgba(34,211,238,0.12),rgba(12,17,19,0.2)_67%)] sm:h-52 sm:w-52">
+                <div className="grid h-32 w-32 place-items-center rounded-full border border-[#22D3EE]/30 sm:h-40 sm:w-40">
+                  <div className="grid h-20 w-20 place-items-center rounded-3xl border border-[#22D3EE]/40 bg-[#0e2021] shadow-[0_0_42px_rgba(34,211,238,0.16)] sm:h-24 sm:w-24">
+                    <img
+                      src="/isotipo/logo-mark-transparent-light-ink.svg"
+                      alt=""
+                      aria-hidden="true"
+                      className="h-14 w-14 sm:h-16 sm:w-16"
+                    />
                   </div>
                 </div>
               </div>

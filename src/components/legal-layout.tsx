@@ -21,20 +21,21 @@ export function LegalLayout({
   children,
 }: LegalLayoutProps) {
   return (
-    <main className="min-h-screen bg-[#050708]">
-      <header className="border-b border-white/10 bg-[#080d0f]">
+    <main className="min-h-screen bg-[#090D13]">
+      <header className="border-b border-white/10 bg-[#11141A]">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-5 sm:px-10">
-          <a href="/" className="flex items-center gap-3" aria-label="Society . E X E, inicio">
+          <a href="/" className="flex items-center" aria-label="Society . E X E, inicio">
             <img
-              src="/isotipo/logo-mark-for-dark.png"
-              alt="Society . E X E"/>
-            <span className="text-sm font-semibold tracking-wide text-white">
-              Society . E X E
-            </span>
+              src="/wordmark/logo-wordmark-for-dark-backgrounds.svg"
+              alt="Society . E X E"
+              width="204"
+              height="35"
+              className="h-[30px] w-auto sm:h-[35px]"
+            />
           </a>
           <a
             href="/"
-            className="rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-[#dce4e4] transition hover:border-[#64e8e0]/60 hover:text-[#79ebe4]"
+            className="rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-[#dce4e4] transition hover:border-[#22D3EE]/60 hover:text-[#22D3EE]"
           >
             Volver
           </a>
@@ -42,7 +43,7 @@ export function LegalLayout({
       </header>
 
       <div className="mx-auto max-w-3xl px-6 pb-16 pt-14 sm:px-10 sm:pb-20 sm:pt-20">
-        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#71e5df]">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#22D3EE]">
           Society . E X E
         </p>
         <h1 className="mt-4 text-4xl font-semibold tracking-[-0.05em] text-white sm:text-5xl">
@@ -66,7 +67,7 @@ export function LegalLayout({
                 key={page}
                 href={href}
                 aria-current={currentPage === page ? "page" : undefined}
-                className={`transition hover:text-[#79ebe4] ${
+                className={`transition hover:text-[#22D3EE] ${
                   currentPage === page ? "text-[#dce4e4]" : ""
                 }`}
               >
@@ -76,7 +77,7 @@ export function LegalLayout({
           </nav>
           <a
             href="mailto:info@society-exe.site"
-            className="transition hover:text-[#79ebe4]"
+            className="transition hover:text-[#22D3EE]"
           >
             Contacto
           </a>

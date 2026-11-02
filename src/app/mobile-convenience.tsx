@@ -34,11 +34,11 @@ export function MobileConvenience() {
     <section
       id="experience"
       aria-labelledby="experience-heading"
-      className="border-y border-white/10 bg-[#0a0f11] px-6 py-24 sm:px-10 lg:px-12 lg:py-32"
+      className="border-y border-white/10 bg-[#11141A] px-6 py-24 sm:px-10 lg:px-12 lg:py-32"
     >
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
         <div>
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#71e5df]">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#22D3EE]">
             Experiencia relevante
           </p>
           <h2
@@ -51,7 +51,7 @@ export function MobileConvenience() {
             Experiencia profesional en desarrollo de terminales, sistemas de
             pago e infraestructura técnica para el sector financiero.
           </p>
-          <div className="mt-9 rounded-2xl border border-white/10 bg-[#0e1517] p-6">
+          <div className="mt-9 rounded-2xl border border-white/10 bg-[#11141A] p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#728083]">
               Formación
             </p>
@@ -70,14 +70,14 @@ export function MobileConvenience() {
           </div>
         </div>
 
-        <ol className="relative space-y-0 before:absolute before:bottom-7 before:left-[7px] before:top-2 before:w-px before:bg-gradient-to-b before:from-[#64e8e0]/60 before:to-white/5">
+        <ol className="relative space-y-0 before:absolute before:bottom-7 before:left-[7px] before:top-2 before:w-px before:bg-gradient-to-b before:from-[#22D3EE]/60 before:to-white/5">
           {EXPERIENCE.map(({ company, role, period, description }) => (
             <li key={company} className="relative pb-9 pl-9 last:pb-0">
               <span
                 aria-hidden="true"
-                className="absolute left-0 top-1.5 h-[15px] w-[15px] rounded-full border-4 border-[#0a0f11] bg-[#64e8e0] shadow-[0_0_14px_rgba(100,232,224,0.55)]"
+                className="absolute left-0 top-1.5 h-[15px] w-[15px] rounded-full border-4 border-[#11141A] bg-[#22D3EE] shadow-[0_0_14px_rgba(34,211,238,0.55)]"
               />
-              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#73e5df]">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#22D3EE]">
                 {period}
               </p>
               <h3 className="mt-2 text-lg font-semibold text-white">

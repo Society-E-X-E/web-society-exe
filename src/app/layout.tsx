@@ -1,11 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Manrope } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -19,6 +20,22 @@ export const metadata: Metadata = {
       "Investigación de una propuesta de autenticación bancaria. Proyecto en etapa de definición.",
     locale: "es_CO",
     type: "website",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon/favicon.ico", sizes: "any" },
+      {
+        url: "/favicon/favicon-32x32.png",
+        type: "image/png",
+        sizes: "32x32",
+      },
+      {
+        url: "/favicon/favicon-192x192.png",
+        type: "image/png",
+        sizes: "192x192",
+      },
+    ],
+    apple: [{ url: "/favicon/apple-touch-icon.png", sizes: "180x180" }],
   },
 };
 
@@ -37,15 +54,8 @@ export default function RootLayout({
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <link rel="shortcut icon" href="/favicon/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/>
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"/>
-        <link rel="icon" type="image/png" sizes="48x48" href="favicon/favicon-48x48.png"/>
-        <link rel="icon" type="image/png" sizes="192x192" href="favicon/favicon-192x192.png"/>
-        <link rel="icon" type="image/png" sizes="512x512" href="favicon/favicon-512x512.png"/>
       </head>
-      <body className={`${manrope.variable} antialiased`}>{children}</body>
+      <body className={`${poppins.variable} antialiased`}>{children}</body>
     </html>
   );
 }

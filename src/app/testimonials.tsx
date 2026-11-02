@@ -30,11 +30,11 @@ export function Principles() {
     <section
       id="approach"
       aria-labelledby="approach-heading"
-      className="bg-[#050708] px-6 py-24 sm:px-10 lg:px-12 lg:py-32"
+      className="bg-[#090D13] px-6 py-24 sm:px-10 lg:px-12 lg:py-32"
     >
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#71e5df]">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#22D3EE]">
             Cómo trabajamos
           </p>
           <h2
@@ -50,8 +50,8 @@ export function Principles() {
         </div>
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
           {PRINCIPLES.map(({ number, title, description }) => (
-            <article key={number} className="bg-[#0b1012] p-6 sm:p-7">
-              <span className="font-mono text-sm text-[#70e9e2]">{number}</span>
+            <article key={number} className="bg-[#11141A] p-6 sm:p-7">
+              <span className="font-mono text-sm text-[#22D3EE]">{number}</span>
               <h3 className="mt-8 text-base font-semibold text-[#f0f4f4]">
                 {title}
               </h3>

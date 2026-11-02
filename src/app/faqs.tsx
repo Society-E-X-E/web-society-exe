@@ -30,11 +30,11 @@ export function Faqs() {
     <section
       id="faq"
       aria-labelledby="faq-heading"
-      className="border-t border-white/10 bg-[#0a0f11] px-6 py-20 sm:px-10 lg:px-12"
+      className="border-t border-white/10 bg-[#11141A] px-6 py-20 sm:px-10 lg:px-12"
     >
       <div className="mx-auto max-w-7xl">
         <div className="max-w-2xl">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#71e5df]">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#22D3EE]">
             Claridad y transparencia
           </p>
           <h2

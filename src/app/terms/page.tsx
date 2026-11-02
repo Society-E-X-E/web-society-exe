@@ -85,7 +85,7 @@ export default function TermsPage() {
           modifican acuerdos escritos que rijan una colaboración autorizada o
           el intercambio de información confidencial. Para consultas, escribe a{" "}
           <a
-            className="text-[#79ebe4] underline decoration-white/25 underline-offset-4 hover:decoration-[#79ebe4]"
+            className="text-[#22D3EE] underline decoration-white/25 underline-offset-4 hover:decoration-[#22D3EE]"
             href="mailto:info@society-exe.site"
           >
             info@society-exe.site
